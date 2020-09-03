@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
@@ -6,7 +8,6 @@ import 'package:star_wars/service/conexao.dart';
 import 'package:star_wars/ui/page_hero.dart';
 import 'package:star_wars/util/constantes.dart';
 import 'package:star_wars/widget/circleAvatar.dart';
-import 'package:tip_dialog/tip_dialog.dart';
 
 import '../store/store_pesquisa.dart';
 
@@ -45,6 +46,27 @@ class _HomeState extends State<Home> {
   }
 
   void _onSubmitted<Map>(String query) {
+    if (query.toString().isEmpty) {
+      //
+    } else if (query.toString().isNotEmpty) {
+      Pessoa pessoa;
+      ConexaoApi()
+        ..carregarByNome(query)
+            .then((value) {
+          log("search: ${value}", name: "log search");
+          pessoa = Pessoa().fromMap(value["results"][0]);
+          pessoa.image = "asset/images/jedis/quin/quinRetrato.png";
+        }).whenComplete(() {
+          log("Pesquisa concluida", name: "log pesquisa");
+          Navigator.of(context).push(
+              MaterialPageRoute<void>(
+                  builder: (BuildContext context) {
+                    return PageHero(pessoa);
+                  }
+              )
+          );
+        }).catchError((e) => print(e));
+    }
   }
 
   @override

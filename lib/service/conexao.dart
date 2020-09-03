@@ -17,4 +17,23 @@ class ConexaoApi {
       print(e);
     }
   }
+  Future carregarByNome<Map>(String nome)async{
+    try{
+      response = await dio.get(_request.getByNome()+nome);
+      print("retorno pessoas ${response.data}");
+      return response.data;
+    }catch(e){
+      print(e);
+    }
+  }
+  Future carregarLink<Map>(String rota)async{
+    try{
+      response = await dio.get(rota);
+      print("retorno link ${response.data}");
+      print("aaaa ${response.data["title"]}");
+      return response.data;
+    }catch(e){
+      print(e);
+    }
+  }
 }
