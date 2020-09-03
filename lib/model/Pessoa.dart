@@ -1,10 +1,11 @@
 class Pessoa{
-  String nome, altura, peso, corCabelo, corPele, corOlho, aniversario, genero;
+  String nome, altura, peso, corCabelo, corPele,
+      corOlho, aniversario, genero, image;
   List<String> filmes, naves, veiculos;
 
   Pessoa({this.nome, this.altura, this.peso, this.corCabelo, this.corPele,
     this.corOlho, this.aniversario, this.genero, this.filmes, this.naves,
-    this.veiculos});
+    this.veiculos, this.image});
 
   Pessoa fromMap(Map<String, dynamic> map){
     Pessoa pessoa =

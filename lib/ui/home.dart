@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:star_wars/model/Pessoa.dart';
 import 'package:star_wars/service/conexao.dart';
+import 'package:star_wars/ui/page_hero.dart';
 import 'package:star_wars/util/constantes.dart';
 import 'package:star_wars/widget/card_home.dart';
 import 'package:tip_dialog/tip_dialog.dart';
@@ -52,117 +53,124 @@ class _HomeState extends State<Home> {
     var sH = MediaQuery.of(context).size.height;
     var sW = MediaQuery.of(context).size.width;
     return WillPopScope(
-        child: SafeArea(
-            child: Scaffold(
-              backgroundColor: Color(0xff000000),
-              appBar: AppBar(
-                backgroundColor: Colors.white.withOpacity(0.2),
-                title: Text("Star Wars"),
-                elevation: 0,
+        child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: NetworkImage("https://images.wallpapersden.com/image/download/star-wars-2019_68285_1125x2436.jpg"),
+            fit: BoxFit.fill)
+          ),
+          child: SafeArea(
+              child: Scaffold(
+                backgroundColor: Colors.white.withOpacity(0.01),
+                appBar: AppBar(
+                  backgroundColor: Colors.white.withOpacity(0.2),
+                  title: Text("Star Wars"),
+                  elevation: 0,
 //                leading: Image.asset("assets/images/logo.png"),
-                centerTitle: true,
+                  centerTitle: true,
 
-              ),
-              body: GestureDetector(
-                onTap: () {
-                  WidgetsBinding.instance.focusManager.primaryFocus?.unfocus();
-                },
-                child: Container(
-                  padding: EdgeInsets.only(top: 20, right: 16, left: 16, bottom: 16),
-                  child: SingleChildScrollView(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Container(
-                              width: sW * 0.9,
-                              height: sH * 0.12,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(image: AssetImage("asset/images/lightsaber.png"), fit: BoxFit.cover)
-                              ),
-                              child: Padding(
-                                padding: EdgeInsets.only(top: sW * 0.05,
-                                    right: sW * 0.18),
-                                child: TextFormField(
-                                  style: TextStyle(
-                                      color: focus.hasFocus
-                                          ? STAR_ICON_COLOR_2
-                                          : STAR_ICON_COLOR_3),
-                                  focusNode: focus,
-                                  maxLines: 1,
-                                  maxLength: 120,
-                                  decoration: InputDecoration(
-                                    isDense: true,
-                                    contentPadding: EdgeInsets.all(10),
-                                    hintText: "Digite aqui",
-                                    labelStyle: TextStyle(color: Colors.blue[100]),
-                                    hintStyle: TextStyle(color: Colors.indigo[50]),
-                                    fillColor: Colors.white,
-                                    filled: true,
-                                    hoverColor: Colors.black,
-                                    focusedBorder: OutlineInputBorder(
-                                        borderRadius: BorderRadius.horizontal(
-                                          left: Radius.circular(25)
-                                        ),
-                                        borderSide: BorderSide(
-                                            color: STAR_ICON_COLOR_2,
-                                            width: 2.0)),
-                                    enabledBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                            color: STAR_ICON_COLOR_3,
-                                            width: 2.0)),
-                                    suffixIcon: IconButton(
-                                        icon: Icon(
-                                          Icons.search,
-                                          color: focus.hasFocus
-                                              ? STAR_ICON_COLOR_2
-                                              : STAR_ICON_COLOR_3,
-                                        ),
-                                        onPressed: () {
-                                          _onSubmitted(store.textSearch.text);
-                                        }),
-                                  ),
-                                  onFieldSubmitted: _onSubmitted,
-                                  controller: store.textSearch,
+                ),
+                body: GestureDetector(
+                  onTap: () {
+                    WidgetsBinding.instance.focusManager.primaryFocus?.unfocus();
+                  },
+                  child: Container(
+                    padding: EdgeInsets.only(top: 20, right: 16, left: 16, bottom: 16),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                width: sW * 0.9,
+                                height: sH * 0.12,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(image: AssetImage("asset/images/lightsaber.png"), fit: BoxFit.cover)
                                 ),
-                              ),
-                            )
-                          ],
-                        ),
-                        Divider(),
-                        FutureBuilder(
-                            future: cPeoples,
-                            builder: (context, snapshot) {
-                              switch (snapshot.connectionState) {
-                                case ConnectionState.none:
-                                case ConnectionState.waiting:
-                                  return Container(
-                                    width: sW,
-                                    height: 500.0,
-                                    alignment: Alignment.center,
-                                    child: CircularProgressIndicator(
-                                      valueColor:
-                                      AlwaysStoppedAnimation<Color>(Colors.black87),
-                                      strokeWidth: 5.0,
+                                child: Padding(
+                                  padding: EdgeInsets.only(top: sW * 0.05,
+                                      right: sW * 0.18),
+                                  child: TextFormField(
+                                    style: TextStyle(
+                                        color: focus.hasFocus
+                                            ? STAR_ICON_COLOR_2
+                                            : STAR_ICON_COLOR_3),
+                                    focusNode: focus,
+                                    maxLines: 1,
+                                    maxLength: 120,
+                                    decoration: InputDecoration(
+                                      isDense: true,
+                                      contentPadding: EdgeInsets.all(10),
+                                      hintText: "Digite aqui",
+                                      labelStyle: TextStyle(color: Colors.blue[100]),
+                                      hintStyle: TextStyle(color: Colors.indigo[50]),
+                                      fillColor: Colors.white,
+                                      filled: true,
+                                      hoverColor: Colors.black,
+                                      focusedBorder: OutlineInputBorder(
+                                          borderRadius: BorderRadius.horizontal(
+                                              left: Radius.circular(25)
+                                          ),
+                                          borderSide: BorderSide(
+                                              color: STAR_ICON_COLOR_2,
+                                              width: 2.0)),
+                                      enabledBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: STAR_ICON_COLOR_3,
+                                              width: 2.0)),
+                                      suffixIcon: IconButton(
+                                          icon: Icon(
+                                            Icons.search,
+                                            color: focus.hasFocus
+                                                ? STAR_ICON_COLOR_2
+                                                : STAR_ICON_COLOR_3,
+                                          ),
+                                          onPressed: () {
+                                            _onSubmitted(store.textSearch.text);
+                                          }),
                                     ),
-                                  );
-                                default:
-                                  if (snapshot.hasError)
-                                    return Container();
-                                  else
-                                    return _buildJedi(snapshot.data);
-                              }
-                            }),
-                      ],
+                                    onFieldSubmitted: _onSubmitted,
+                                    controller: store.textSearch,
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                          Divider(),
+                          FutureBuilder(
+                              future: cPeoples,
+                              builder: (context, snapshot) {
+                                switch (snapshot.connectionState) {
+                                  case ConnectionState.none:
+                                  case ConnectionState.waiting:
+                                    return Container(
+                                      width: sW,
+                                      height: 500.0,
+                                      alignment: Alignment.center,
+                                      child: CircularProgressIndicator(
+                                        valueColor:
+                                        AlwaysStoppedAnimation<Color>(Colors.black87),
+                                        strokeWidth: 5.0,
+                                      ),
+                                    );
+                                  default:
+                                    if (snapshot.hasError)
+                                      return Container();
+                                    else
+                                      return _buildJedi(snapshot.data);
+                                }
+                              }),
+                        ],
+                      ),
                     ),
                   ),
                 ),
-              ),
-            )),
+              )),
+        ),
         onWillPop: (){
           return showDialog(
               context: context,
@@ -205,19 +213,30 @@ class _HomeState extends State<Home> {
           Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height * 0.23,
-            color: Colors.yellowAccent,
             child: ListView.builder(
                 physics: ScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 shrinkWrap: true,
                 itemCount: map['results'].length,
                 itemBuilder: (context, int index) {
-                  return SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.7,
-                    child: TileResult(
-                      pessoa: Pessoa(
-                      ).fromMap(map['results'][index]),
+                  var pessoa = Pessoa().fromMap(map['results'][index]);
+                  pessoa.image = "asset/images/jedis/quin/quinRetrato.png";
+                  return GestureDetector(
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.5,
+                      child: TileResult(
+                        pessoa: pessoa,
+                      ),
                     ),
+                    onTap: (){
+                      Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                              builder: (BuildContext context) {
+                                return PageHero(pessoa);
+                              }
+                          )
+                      );
+                    },
                   );
                 }),
           )
