@@ -5,7 +5,7 @@ import 'package:star_wars/model/Pessoa.dart';
 import 'package:star_wars/service/conexao.dart';
 import 'package:star_wars/ui/page_hero.dart';
 import 'package:star_wars/util/constantes.dart';
-import 'package:star_wars/widget/card_home.dart';
+import 'package:star_wars/widget/circleAvatar.dart';
 import 'package:tip_dialog/tip_dialog.dart';
 
 import '../store/store_pesquisa.dart';
@@ -56,7 +56,7 @@ class _HomeState extends State<Home> {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: NetworkImage("https://images.wallpapersden.com/image/download/star-wars-2019_68285_1125x2436.jpg"),
+                image: NetworkImage("https://themobilewallpaper.com/uploads/blog_images/Devices-iPhone-5-mobile-tablet-HD-Wallpaper-1593852393.jpg"),
             fit: BoxFit.fill)
           ),
           child: SafeArea(

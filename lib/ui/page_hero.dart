@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:star_wars/model/Pessoa.dart';
+import 'package:star_wars/widget/list_detalhes.dart';
 import 'package:star_wars/widget/my_hero.dart';
 
 class PageHero extends StatelessWidget {
@@ -74,7 +75,7 @@ class PageHero extends StatelessWidget {
                             ]),
                       )),
                   Positioned(
-                      top: sizeH * .5,
+                      top: sizeH * .25,
                       left: sizeW * .15,
                       child: Card(
                         color: Colors.white.withOpacity(.1),
@@ -241,6 +242,27 @@ class PageHero extends StatelessWidget {
                                         ],
                                       )),
                                 ],
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                              child: Container(
+                                width: sizeW * 0.6,
+                                child: ListResult(pessoa.filmes, "Filmes"),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                              child: Container(
+                                width: sizeW * 0.6,
+                                child: ListResult(pessoa.naves, "Naves"),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                              child: Container(
+                                width: sizeW * 0.6,
+                                child: ListResult(pessoa.veiculos, "Veículos"),
                               ),
                             )
                           ],
