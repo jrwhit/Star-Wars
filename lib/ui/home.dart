@@ -49,6 +49,8 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     var textTheme = Theme.of(context).textTheme;
+    var sH = MediaQuery.of(context).size.height;
+    var sW = MediaQuery.of(context).size.width;
     return WillPopScope(
         child: SafeArea(
             child: Scaffold(
@@ -77,14 +79,14 @@ class _HomeState extends State<Home> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             Container(
-                              width: MediaQuery.of(context).size.width * 0.9,
-                              height: MediaQuery.of(context).size.height * 0.12,
+                              width: sW * 0.9,
+                              height: sH * 0.12,
                               decoration: BoxDecoration(
                                 image: DecorationImage(image: AssetImage("asset/images/lightsaber.png"), fit: BoxFit.cover)
                               ),
                               child: Padding(
-                                padding: EdgeInsets.only(top: MediaQuery.of(context).size.width * 0.05,
-                                    right: MediaQuery.of(context).size.width * 0.18),
+                                padding: EdgeInsets.only(top: sW * 0.05,
+                                    right: sW * 0.18),
                                 child: TextFormField(
                                   style: TextStyle(
                                       color: focus.hasFocus
@@ -132,19 +134,6 @@ class _HomeState extends State<Home> {
                           ],
                         ),
                         Divider(),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: <Widget>[
-                            Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 10.0),
-                              child: Text(
-                                "Jedis",
-                                style: textTheme.caption.copyWith(fontSize: 18.0, color: Colors.white),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Divider(),
                         FutureBuilder(
                             future: cPeoples,
                             builder: (context, snapshot) {
@@ -152,7 +141,7 @@ class _HomeState extends State<Home> {
                                 case ConnectionState.none:
                                 case ConnectionState.waiting:
                                   return Container(
-                                    width: MediaQuery.of(context).size.width,
+                                    width: sW,
                                     height: 500.0,
                                     alignment: Alignment.center,
                                     child: CircularProgressIndicator(
@@ -210,12 +199,13 @@ class _HomeState extends State<Home> {
             padding: EdgeInsets.only(bottom: 4),
             child: Text("Jedis",
                 style: Theme.of(context).textTheme.caption.copyWith(
-                    color: Colors.red, fontWeight: FontWeight.w700)),
+                    color: Colors.yellowAccent,
+                    fontWeight: FontWeight.w500, fontSize: 16)),
           ),
           Container(
             width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 0.3,
-            color: Colors.grey[100],
+            height: MediaQuery.of(context).size.height * 0.23,
+            color: Colors.yellowAccent,
             child: ListView.builder(
                 physics: ScrollPhysics(),
                 scrollDirection: Axis.horizontal,
