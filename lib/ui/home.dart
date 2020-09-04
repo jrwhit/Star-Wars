@@ -7,6 +7,7 @@ import 'package:star_wars/model/Pessoa.dart';
 import 'package:star_wars/service/conexao.dart';
 import 'package:star_wars/ui/page_hero.dart';
 import 'package:star_wars/util/constantes.dart';
+import 'package:star_wars/widget/carousel_home.dart';
 import 'package:star_wars/widget/circleAvatar.dart';
 
 import '../store/store_pesquisa.dart';
@@ -55,7 +56,7 @@ class _HomeState extends State<Home> {
             .then((value) {
           log("search: ${value}", name: "log search");
           pessoa = Pessoa().fromMap(value["results"][0]);
-          pessoa.image = "asset/images/jedis/quin/quinRetrato.png";
+          pessoa.image = "asset/images/quinRetrato.png";
         }).whenComplete(() {
           log("Pesquisa concluida", name: "log pesquisa");
           Navigator.of(context).push(
@@ -111,7 +112,7 @@ class _HomeState extends State<Home> {
                                 width: sW * 0.9,
                                 height: sH * 0.12,
                                 decoration: BoxDecoration(
-                                    image: DecorationImage(image: AssetImage("asset/images/lightsaber.png"), fit: BoxFit.cover)
+                                    image: DecorationImage(image: AssetImage("assets/images/lightsaber.png"), fit: BoxFit.cover)
                                 ),
                                 child: Padding(
                                   padding: EdgeInsets.only(top: sW * 0.05,
@@ -163,29 +164,10 @@ class _HomeState extends State<Home> {
                             ],
                           ),
                           Divider(),
-                          FutureBuilder(
-                              future: cPeoples,
-                              builder: (context, snapshot) {
-                                switch (snapshot.connectionState) {
-                                  case ConnectionState.none:
-                                  case ConnectionState.waiting:
-                                    return Container(
-                                      width: sW,
-                                      height: 500.0,
-                                      alignment: Alignment.center,
-                                      child: CircularProgressIndicator(
-                                        valueColor:
-                                        AlwaysStoppedAnimation<Color>(Colors.black87),
-                                        strokeWidth: 5.0,
-                                      ),
-                                    );
-                                  default:
-                                    if (snapshot.hasError)
-                                      return Container();
-                                    else
-                                      return _buildJedi(snapshot.data);
-                                }
-                              }),
+                          Carousel(cPeoples, sW, "Jedis"),
+                          Carousel(cPeoples, sW, "Filmes"),
+                          Carousel(cPeoples, sW, "Naves"),
+                          Carousel(cPeoples, sW, "Veículos"),
                         ],
                       ),
                     ),
@@ -216,54 +198,6 @@ class _HomeState extends State<Home> {
               }
           ) ?? false;
         }
-    );
-  }
-  Widget _buildJedi(request) {
-    Map<String, dynamic> map = request;
-    return Padding(
-      padding: EdgeInsets.only(top: 10),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Padding(
-            padding: EdgeInsets.only(bottom: 4),
-            child: Text("Jedis",
-                style: Theme.of(context).textTheme.caption.copyWith(
-                    color: Colors.yellowAccent,
-                    fontWeight: FontWeight.w500, fontSize: 16)),
-          ),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 0.23,
-            child: ListView.builder(
-                physics: ScrollPhysics(),
-                scrollDirection: Axis.horizontal,
-                shrinkWrap: true,
-                itemCount: map['results'].length,
-                itemBuilder: (context, int index) {
-                  var pessoa = Pessoa().fromMap(map['results'][index]);
-                  pessoa.image = "asset/images/jedis/quin/quinRetrato.png";
-                  return GestureDetector(
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.5,
-                      child: TileResult(
-                        pessoa: pessoa,
-                      ),
-                    ),
-                    onTap: (){
-                      Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                              builder: (BuildContext context) {
-                                return PageHero(pessoa);
-                              }
-                          )
-                      );
-                    },
-                  );
-                }),
-          )
-        ],
-      ),
     );
   }
 }

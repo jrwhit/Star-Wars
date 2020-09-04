@@ -30,11 +30,11 @@ flutter:
   uses-material-design: true
 
   assets:
-    - asset/images/lightsaber.png
-    - asset/images/jedis/quin/quinavatar.png
-    - asset/images/jedis/quin/quinRetrato.png
-    - asset/images/background/ceu.png
-    - asset/images/etc/r2d2.png
+    - assets/images/lightsaber.png
+    - assets/images/quinavatar.png
+    - assets/images/quinRetrato.png
+    - assets/images/ceu.png
+    - assets/images/r2d2.png
 
   # example:
   # fonts:

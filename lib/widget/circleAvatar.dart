@@ -27,7 +27,7 @@ class _TileResultState extends State<TileResult> {
       children: <Widget>[
         CircleAvatar(
           radius: sH * .09,
-          backgroundColor: Colors.grey[700],
+          backgroundColor: Colors.white.withOpacity(0.2),
           backgroundImage: NetworkImage(
               "https://img2.wikia.nocookie.net/__cb20100915165213/starwars/images/8/84/QuiGonJinn-SWSB.png"),
         ),

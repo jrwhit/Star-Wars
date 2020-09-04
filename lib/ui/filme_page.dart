@@ -54,7 +54,7 @@ class PageFilm extends StatelessWidget {
                 color: Colors.white.withOpacity(0.1),
                 child: Column(
                   children: <Widget>[
-                    Image.asset("asset/images/etc/r2d2.png"),
+                    Image.asset("assets/images/r2d2.png"),
                     Text(film.titulo, style: themeText.caption.copyWith(color: Colors.white, fontSize: 20),),
                     Text(film.producao, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16),),
                     Text(film.diretor, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16),),
