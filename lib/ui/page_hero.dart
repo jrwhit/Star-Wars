@@ -31,7 +31,7 @@ class PageHero extends StatelessWidget {
                     IconButton(
                         icon: Icon(
                           Icons.arrow_back,
-                          color: Colors.red,
+                          color: Colors.white,
                         ),
                         onPressed: () {
                           Navigator.of(context).pop();
@@ -65,8 +65,8 @@ class PageHero extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                        top: sizeH * .25,
-                        child: Card(
+                        top: sizeH * .0003,
+                        child: SingleChildScrollView(child: Card(
                           color: Colors.white.withOpacity(.1),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -89,8 +89,8 @@ class PageHero extends StatelessWidget {
                                                   .textTheme
                                                   .subtitle1
                                                   .copyWith(
-                                                      color: Colors.white,
-                                                      fontSize: sizeW * .025),
+                                                  color: Colors.white,
+                                                  fontSize: sizeW * .025),
                                             ),
                                             TextSpan(
                                               text: pessoa.altura,
@@ -98,9 +98,9 @@ class PageHero extends StatelessWidget {
                                                   .textTheme
                                                   .subtitle1
                                                   .copyWith(
-                                                    color: Colors.white,
-                                                    fontSize: 16,
-                                                  ),
+                                                color: Colors.white,
+                                                fontSize: 16,
+                                              ),
                                             )
                                           ],
                                         )),
@@ -115,8 +115,8 @@ class PageHero extends StatelessWidget {
                                                   .textTheme
                                                   .subtitle1
                                                   .copyWith(
-                                                      color: Colors.white,
-                                                      fontSize: sizeW * .025),
+                                                  color: Colors.white,
+                                                  fontSize: sizeW * .025),
                                             ),
                                             TextSpan(
                                               text: pessoa.peso,
@@ -124,9 +124,9 @@ class PageHero extends StatelessWidget {
                                                   .textTheme
                                                   .subtitle1
                                                   .copyWith(
-                                                    color: Colors.white,
-                                                    fontSize: 16,
-                                                  ),
+                                                color: Colors.white,
+                                                fontSize: 16,
+                                              ),
                                             )
                                           ],
                                         )),
@@ -141,8 +141,8 @@ class PageHero extends StatelessWidget {
                                                   .textTheme
                                                   .subtitle1
                                                   .copyWith(
-                                                      color: Colors.white,
-                                                      fontSize: sizeW * .025),
+                                                  color: Colors.white,
+                                                  fontSize: sizeW * .025),
                                             ),
                                             TextSpan(
                                               text: pessoa.corPele,
@@ -150,9 +150,9 @@ class PageHero extends StatelessWidget {
                                                   .textTheme
                                                   .subtitle1
                                                   .copyWith(
-                                                    color: Colors.white,
-                                                    fontSize: 16,
-                                                  ),
+                                                color: Colors.white,
+                                                fontSize: 16,
+                                              ),
                                             )
                                           ],
                                         )),
@@ -167,8 +167,8 @@ class PageHero extends StatelessWidget {
                                                   .textTheme
                                                   .subtitle1
                                                   .copyWith(
-                                                      color: Colors.white,
-                                                      fontSize: sizeW * .025),
+                                                  color: Colors.white,
+                                                  fontSize: sizeW * .025),
                                             ),
                                             TextSpan(
                                               text: pessoa.corCabelo,
@@ -176,9 +176,9 @@ class PageHero extends StatelessWidget {
                                                   .textTheme
                                                   .subtitle1
                                                   .copyWith(
-                                                    color: Colors.white,
-                                                    fontSize: 16,
-                                                  ),
+                                                color: Colors.white,
+                                                fontSize: 16,
+                                              ),
                                             ),
                                           ],
                                         )),
@@ -193,8 +193,8 @@ class PageHero extends StatelessWidget {
                                                   .textTheme
                                                   .subtitle1
                                                   .copyWith(
-                                                      color: Colors.white,
-                                                      fontSize: sizeW * .025),
+                                                  color: Colors.white,
+                                                  fontSize: sizeW * .025),
                                             ),
                                             TextSpan(
                                               text: pessoa.corOlho,
@@ -202,9 +202,9 @@ class PageHero extends StatelessWidget {
                                                   .textTheme
                                                   .subtitle1
                                                   .copyWith(
-                                                    color: Colors.white,
-                                                    fontSize: 16,
-                                                  ),
+                                                color: Colors.white,
+                                                fontSize: 16,
+                                              ),
                                             )
                                           ],
                                         )),
@@ -219,26 +219,26 @@ class PageHero extends StatelessWidget {
                                   child: ListResult(pessoa.filmes, "Filmes"),
                                 ),
                               ),
-//                              Padding(
-//                                padding: EdgeInsets.symmetric(vertical: 16),
-//                                child: Container(
-//                                  alignment: Alignment.centerLeft,
-//                                  width: sizeW,
-//                                  child: ListResult(pessoa.naves, "Naves"),
-//                                ),
-//                              ),
-//                              Padding(
-//                                padding: EdgeInsets.symmetric(
-//                                    vertical: 16, horizontal: 16),
-//                                child: Container(
-//                                  width: sizeW,
-//                                  child:
-//                                      ListResult(pessoa.veiculos, "Veículos"),
-//                                ),
-//                              )
+                              Padding(
+                                padding: EdgeInsets.symmetric(vertical: 16),
+                                child: Container(
+                                  alignment: Alignment.centerLeft,
+                                  width: sizeW,
+                                  child: ListResult(pessoa.naves, "Naves"),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 16, horizontal: 16),
+                                child: Container(
+                                  width: sizeW,
+                                  child:
+                                  ListResult(pessoa.veiculos, "Veiculos"),
+                                ),
+                              )
                             ],
                           ),
-                        )),
+                        ),)),
                   ],
                 ),
               ),

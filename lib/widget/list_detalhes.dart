@@ -47,12 +47,46 @@ class ListResult extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.2,
               padding: EdgeInsets.symmetric(vertical: 10),
               child: ListView.builder(
-                  shrinkWrap: true,
-                  physics: ScrollPhysics(),
+                  physics: AlwaysScrollableScrollPhysics(),
+                  reverse: false,
                   scrollDirection: Axis.horizontal,
                   itemCount: _list.length,
                   itemBuilder: (context, index) {
-                    return _buildLink(_list[index], context, _title);
+                    return GestureDetector(
+                      onTap: () {
+                        switch (result.type) {
+                          case "naves":
+                            Nave nave;
+                            ConexaoApi()..carregarLink(_list[index]).
+                            then((value) => nave = Nave().fromMap(value))
+                                .whenComplete(() => Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => NavePage(
+                                    nave
+                                ))));
+                            break;
+                          case "filmes":
+                            Filme filme;
+                            ConexaoApi()..carregarLink(_list[index]).
+                            then((value) => filme = Filme().fromMap(value))
+                                .whenComplete(() => Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => PageFilm(
+                                    filme
+                                ))));
+                            break;
+                          case "veiculos":
+                            Veiculo veiculo;
+                            ConexaoApi()..carregarLink(_list[index]).
+                            then((value) => veiculo = Veiculo().fromMap(value))
+                                .whenComplete(() => Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => VeiculoPage(
+                                    veiculo
+                                ))));
+                            break;
+                        }
+                        print(_list[index]);
+                      },
+                      child: _buildLink(_list[index], context, _title),
+                    );
                   }),
             )
           ],
@@ -89,53 +123,74 @@ class ListResult extends StatelessWidget {
 
   Widget _build(request, context, title, link) {
     Map<String, dynamic> map = request;
-    switch(title){
+    switch (title) {
       case "Filmes":
-        result = Result(map["title"], map["director"], map["episode_id"].toString(), link, title.toString().toLowerCase());
+        result = Result(map["title"], map["director"],
+            map["episode_id"].toString(), link, title.toString().toLowerCase());
         break;
       case "Naves":
+        result = Result(map["name"], map["starship_class"], map["model"], link,
+            title.toString().toLowerCase());
+        result.nave = Nave().fromMap(map);
         break;
-      case "Veículos":
+      case "Veiculos":
+        result = Result(map["name"], map["vehicle_class"], map["model"], link,
+            title.toString().toLowerCase());
         break;
     }
-    return Container(
-        width: MediaQuery.of(context).size.width * 0.65,
-        height: 50,
-        child: Container(
-          margin: EdgeInsets.symmetric(vertical: 4, horizontal: 10),
-          width: 100,
-          height: 100,
-          color: Colors.blue.withOpacity(0.1),
-          child: Flex(
-            direction: Axis.horizontal,
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              Container(
-                width: MediaQuery.of(context).size.width * 0.2,
-                height: MediaQuery.of(context).size.height * 0.3,
-                child: Image.network(
-                  "https://img2.wikia.nocookie.net/__cb20100915165213/starwars/images/8/84/QuiGonJinn-SWSB.png",
-                  fit: BoxFit.fill,
-                ),
+    return SizedBox(
+      width: MediaQuery.of(context).size.width * 0.65,
+      height: 50,
+      child: Container(
+        margin: EdgeInsets.symmetric(vertical: 4, horizontal: 10),
+        width: 100,
+        height: 100,
+        color: Colors.blue.withOpacity(0.1),
+        child: Flex(
+          direction: Axis.horizontal,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Container(
+              width: MediaQuery.of(context).size.width * 0.2,
+              height: MediaQuery.of(context).size.height * 0.3,
+              child: Image.network(
+                "https://img2.wikia.nocookie.net/__cb20100915165213/starwars/images/8/84/QuiGonJinn-SWSB.png",
+                fit: BoxFit.fill,
               ),
-              Flexible(child: Card(
+            ),
+            Flexible(
+              child: Card(
                 color: Colors.white.withAlpha(50),
                 child: ListTile(
-                  title: Text(result.titulo, style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),),
-                  subtitle: Text(result.subtitulo, style: TextStyle(color: Colors.white, fontWeight: FontWeight.w100),),
-                  trailing: Padding(padding: EdgeInsets.only(bottom: 40, left: 10),
-                    child: Text(result.trailing, style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),),),
+                  title: Text(
+                    result.titulo,
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.w600),
+                  ),
+                  subtitle: Text(
+                    result.subtitulo,
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.w100),
+                  ),
+//                  trailing: Padding(padding: EdgeInsets.only(bottom: 40, left: 10),
+//                    child: Text(result.trailing, style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),),),
                 ),
-              ))
-            ],
-          ),
-        ));
+              ),
+            )
+          ],
+        ),
+      ),
+    );
   }
   //film:title, dataLancamento, diretor
   //nave:nome, modelo, class
   //veiculo:nome, modelo, class
 }
-class Result{
+
+class Result {
   String titulo, subtitulo, trailing, link, type;
+  Nave nave;
+  Filme film;
+  Veiculo veiculo;
   Result(this.titulo, this.subtitulo, this.trailing, this.link, this.type);
 }

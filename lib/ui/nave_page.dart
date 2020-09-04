@@ -17,7 +17,7 @@ class NavePage extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("asset/images/background/ceu.png"))),
+                  image: AssetImage("assets/images/ceu.png"))),
           child: Scaffold(
             backgroundColor: Colors.white.withOpacity(0.01),
             body: SingleChildScrollView(
@@ -54,7 +54,7 @@ class NavePage extends StatelessWidget {
                       color: Colors.white.withOpacity(0.1),
                       child: Column(
                         children: <Widget>[
-                          Image.asset("asset/images/etc/r2d2.png"),
+                          Image.asset("assets/images/r2d2.png"),
                           Text(nave.nome, style: themeText.caption.copyWith(color: Colors.white, fontSize: 20),),
                           Text(nave.velocidadeMax, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16),),
                           Text(nave.passageiros, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16),),
