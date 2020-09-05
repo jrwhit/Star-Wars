@@ -55,6 +55,34 @@ class ListResult extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return GestureDetector(
                       onTap: () {
+                        showDialog(
+                            barrierDismissible: false,
+                            context: context,
+                            builder: (_) => new Dialog(
+                              child: new Container(
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage("assets/images/loading.gif"),
+                                        fit: BoxFit.cover
+                                    )
+                                ),
+                                alignment: FractionalOffset.center,
+                                height: MediaQuery.of(context).size.width * 0.5,
+                                width: MediaQuery.of(context).size.width * 0.2,
+                                padding: const EdgeInsets.all(20.0),
+                                child: new Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    new Padding(
+                                      padding: new EdgeInsets.only(left: 10.0),
+                                      child: new Text("Loading", style: TextStyle(color: Colors.white),),
+                                    ),
+                                    new CircularProgressIndicator(),
+                                  ],
+                                ),
+                              ),
+                            ));
                         switch (result.type) {
                           case "residents":
                           case "characters":
@@ -67,11 +95,13 @@ class ListResult extends StatelessWidget {
                                 pessoa.image = "assets/images/quinRetrato.png";
                                 ConexaoApi()
                                     .carregarLink(value["homeworld"])
-                                    .then((planet) => pessoa.planeta = Planeta().fromMap(planet))
-                                    .whenComplete(() => Navigator.of(context)
-                                        .push(MaterialPageRoute(
-                                            builder: (context) =>
-                                                PageHero(pessoa))));
+                                    .then((planet) => pessoa.planeta =
+                                        Planeta().fromMap(planet))
+                                    .whenComplete(() {
+                                  Navigator.of(context).pop();
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => PageHero(pessoa)));
+                                });
                               });
                             break;
                           case "starships":
@@ -79,10 +109,11 @@ class ListResult extends StatelessWidget {
                             ConexaoApi()
                               ..carregarLink(_list[index])
                                   .then((value) => nave = Nave().fromMap(value))
-                                  .whenComplete(() => Navigator.of(context)
-                                      .push(MaterialPageRoute(
-                                          builder: (context) =>
-                                              NavePage(nave))));
+                                  .whenComplete(() {
+                                Navigator.of(context).pop();
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => NavePage(nave)));
+                              });
                             break;
                           case "films":
                             Filme filme;
@@ -90,10 +121,11 @@ class ListResult extends StatelessWidget {
                               ..carregarLink(_list[index])
                                   .then(
                                       (value) => filme = Filme().fromMap(value))
-                                  .whenComplete(() => Navigator.of(context)
-                                      .push(MaterialPageRoute(
-                                          builder: (context) =>
-                                              PageFilm(filme))));
+                                  .whenComplete(() {
+                                Navigator.of(context).pop();
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => PageFilm(filme)));
+                              });
                             break;
                           case "vehicles":
                             Veiculo veiculo;
@@ -101,21 +133,24 @@ class ListResult extends StatelessWidget {
                               ..carregarLink(_list[index])
                                   .then((value) =>
                                       veiculo = Veiculo().fromMap(value))
-                                  .whenComplete(() => Navigator.of(context)
-                                      .push(MaterialPageRoute(
-                                          builder: (context) =>
-                                              VeiculoPage(veiculo))));
+                                  .whenComplete(() {
+                                Navigator.of(context).pop();
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) =>
+                                        VeiculoPage(veiculo)));
+                              });
                             break;
                           case "planets":
                             Planeta planeta;
                             ConexaoApi()
                               ..carregarLink(_list[index])
                                   .then((value) =>
-                              planeta = Planeta().fromMap(value))
-                                  .whenComplete(() => Navigator.of(context)
-                                  .push(MaterialPageRoute(
-                                  builder: (context) =>
-                                      PlanetPage(planeta))));
+                                      planeta = Planeta().fromMap(value))
+                                  .whenComplete(() {
+                                Navigator.of(context).pop();
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => PlanetPage(planeta)));
+                              });
                             break;
                           case "species":
                             Especie especie;
@@ -124,11 +159,14 @@ class ListResult extends StatelessWidget {
                                 especie = Especie().fromMap(value);
                                 ConexaoApi()
                                     .carregarLink(value["homeworld"])
-                                    .then((planet) => especie.mundo = Planeta().fromMap(planet))
-                                    .whenComplete(() => Navigator.of(context)
-                                    .push(MaterialPageRoute(
-                                    builder: (context) =>
-                                        SpeciePage(especie))));
+                                    .then((planet) => especie.mundo =
+                                        Planeta().fromMap(planet))
+                                    .whenComplete(() {
+                                  Navigator.of(context).pop();
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) =>
+                                          SpeciePage(especie)));
+                                });
                               });
                             break;
                         }
@@ -198,8 +236,8 @@ class ListResult extends StatelessWidget {
             title.toString().toLowerCase());
         break;
       case "Species":
-        result = Result(map["name"], map["language"], map["classification"], link,
-            title.toString().toLowerCase());
+        result = Result(map["name"], map["language"], map["classification"],
+            link, title.toString().toLowerCase());
         break;
     }
     return SizedBox(

@@ -82,15 +82,46 @@ class Carousel extends StatelessWidget {
                       ),
                     ),
                     onTap: (){
+                      showDialog(
+                          barrierDismissible: false,
+                          context: context,
+                          builder: (_) => new Dialog(
+                            child: new Container(
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage("assets/images/loading.gif"),
+                                  fit: BoxFit.cover
+                                )
+                              ),
+                              alignment: FractionalOffset.center,
+                              height: sW * 0.5,
+                              width: sW * 0.2,
+                              padding: const EdgeInsets.all(20.0),
+                              child: new Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  new Padding(
+                                    padding: new EdgeInsets.only(left: 10.0),
+                                    child: new Text("Loading", style: TextStyle(color: Colors.white),),
+                                  ),
+                                  new CircularProgressIndicator(),
+                                ],
+                              ),
+                            ),
+                          ));
                       ConexaoApi()..carregarLink(map["results"][index]["homeworld"])
                           .then((value) => pessoa.planeta = Planeta().fromMap(value))
-                          .whenComplete(() => Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                              builder: (BuildContext context) {
-                                return PageHero(pessoa);
-                              }
-                          )
-                      ));
+                          .whenComplete((){
+                            Navigator.of(context).pop();
+                        Navigator.of(context).push(
+                            MaterialPageRoute<void>(
+                                builder: (BuildContext context) {
+                                  return PageHero(pessoa);
+                                }
+                            )
+                        );
+                      });
                     },
                   );
                 }),

@@ -1,8 +1,10 @@
 import 'dart:developer';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:loading_overlay/loading_overlay.dart';
 import 'package:star_wars/model/Pessoa.dart';
 import 'package:star_wars/model/planeta.dart';
 import 'package:star_wars/service/conexao.dart';
@@ -22,6 +24,7 @@ class _HomeState extends State<Home> {
   PesquisaStore store;
   ConexaoApi api;
   Future cPeoples;
+  bool loading;
 
   @override
   void initState() {
@@ -47,22 +50,56 @@ class _HomeState extends State<Home> {
   }
 
   void _onSubmitted<Map>(String query) {
+    showDialog(
+        barrierDismissible: false,
+        context: this.context,
+        builder: (_) => new Dialog(
+          child: new Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assets/images/loading.gif"),
+                    fit: BoxFit.cover
+                )
+            ),
+            alignment: FractionalOffset.center,
+            height: MediaQuery.of(context).size.width * 0.5,
+            width: MediaQuery.of(context).size.width * 0.2,
+            padding: const EdgeInsets.all(20.0),
+            child: new Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                new Padding(
+                  padding: new EdgeInsets.only(left: 10.0),
+                  child: new Text("Loading", style: TextStyle(color: Colors.white),),
+                ),
+                new CircularProgressIndicator(),
+              ],
+            ),
+          ),
+        ));
     if (query.toString().isEmpty) {
-      //
     } else if (query.toString().isNotEmpty) {
       Pessoa pessoa;
       ConexaoApi()
         ..carregarByNome(query)
-            .then((value) {
-          pessoa = Pessoa().fromMap(value["results"][0]);
-          pessoa.image = "assets/images/quinRetrato.png";
-          ConexaoApi()
-              .carregarLink(value["results"][0]["homeworld"])
-              .then((planet) => pessoa.planeta = Planeta().fromMap(planet))
-              .whenComplete(() => Navigator.of(context)
-              .push(MaterialPageRoute(
-              builder: (context) =>
-                  PageHero(pessoa))));
+            .then((value) async {
+          if(value["results"].isEmpty){
+
+          }else{
+            pessoa = Pessoa().fromMap(value["results"][0]);
+            pessoa.image = "assets/images/quinRetrato.png";
+            ConexaoApi()
+                .carregarLink(value["results"][0]["homeworld"])
+                .then((planet) => pessoa.planeta = Planeta().fromMap(planet))
+                .whenComplete((){
+                  Navigator.of(context).pop();
+              Navigator.of(context)
+                  .push(MaterialPageRoute(
+                  builder: (context) =>
+                      PageHero(pessoa)));
+            });
+          }
         }).catchError((e) => print(e));
     }
   }
@@ -75,9 +112,9 @@ class _HomeState extends State<Home> {
     return WillPopScope(
         child: Container(
           decoration: BoxDecoration(
-            image: DecorationImage(
-                image: NetworkImage("https://themobilewallpaper.com/uploads/blog_images/Devices-iPhone-5-mobile-tablet-HD-Wallpaper-1593852393.jpg"),
-            fit: BoxFit.fill)
+              image: DecorationImage(
+                  image: NetworkImage("https://themobilewallpaper.com/uploads/blog_images/Devices-iPhone-5-mobile-tablet-HD-Wallpaper-1593852393.jpg"),
+                  fit: BoxFit.fill)
           ),
           child: SafeArea(
               child: Scaffold(
@@ -125,7 +162,7 @@ class _HomeState extends State<Home> {
                                     decoration: InputDecoration(
                                       isDense: true,
                                       contentPadding: EdgeInsets.all(10),
-                                      hintText: "Digite aqui",
+                                      hintText: "Digite o nome de um personagem",
                                       labelStyle: TextStyle(color: Colors.blue[100]),
                                       hintStyle: TextStyle(color: Colors.indigo[50]),
                                       fillColor: Colors.white,
