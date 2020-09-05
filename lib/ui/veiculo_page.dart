@@ -8,14 +8,12 @@ class VeiculoPage extends StatelessWidget {
   VeiculoPage(this.veiculo);
   final Veiculo veiculo;
 
-  Widget paragraph(style, text, text2, colorFont){
+  Widget paragraph(style, text, text2, colorFont) {
     return RichText(
         overflow: TextOverflow.ellipsis,
         text: TextSpan(
             style: style.headline2.copyWith(
-                color: colorFont,
-                fontSize: 16.0,
-                fontWeight: FontWeight.w500),
+                color: colorFont, fontSize: 16.0, fontWeight: FontWeight.w500),
             children: [
               TextSpan(
                 text: text,
@@ -25,6 +23,7 @@ class VeiculoPage extends StatelessWidget {
               ),
             ]));
   }
+
   @override
   Widget build(BuildContext context) {
     var sizeW = MediaQuery.of(context).size.width;
@@ -55,7 +54,7 @@ class VeiculoPage extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.only(left: sizeW * 0.2),
                       child: Text(
-                        "Veiculo",
+                        "Vehicle",
                         style: TextStyle(color: Colors.white, fontSize: 16),
                       ),
                     )
@@ -89,45 +88,47 @@ class VeiculoPage extends StatelessWidget {
                   width: sizeW,
                   padding: EdgeInsets.symmetric(vertical: 18, horizontal: 8),
                   color: Colors.white.withOpacity(0.1),
-                  child: Table(
-                    columnWidths: {2: FractionColumnWidth(.3)},
-                    children: [
-                      TableRow(children: [
-                        paragraph(themeText, "Cost: ", veiculo.custo, Colors.white),
-                        paragraph(themeText, "Model: ", veiculo.modelo, Colors.white),
-                      ]),
-                      TableRow(
+                  child: Column(
+                    children: <Widget>[
+                      Table(
+                        columnWidths: {2: FractionColumnWidth(.3)},
                         children: [
-                          paragraph(themeText, "Passengers: ", veiculo.passageiros, Colors.white),
-                          paragraph(themeText, "Consumables: ", veiculo.consumables, Colors.white),
-                        ]
+                          TableRow(children: [
+                            paragraph(themeText, "Cost: ", veiculo.custo,
+                                Colors.white),
+                            paragraph(themeText, "Model: ", veiculo.modelo,
+                                Colors.white),
+                          ]),
+                          TableRow(children: [
+                            paragraph(themeText, "Passengers: ",
+                                veiculo.passageiros, Colors.white),
+                            paragraph(themeText, "Consumables: ",
+                                veiculo.consumables, Colors.white),
+                          ]),
+                          TableRow(children: [
+                            paragraph(themeText, "Crew: ", veiculo.crew,
+                                Colors.white),
+                            paragraph(themeText, "Speed: ", veiculo.speed,
+                                Colors.white),
+                          ]),
+                        ],
                       ),
-                      TableRow(
-                          children: [
-                            paragraph(themeText, "Crew: ", veiculo.crew, Colors.white),
-                            paragraph(themeText, "Speed: ", veiculo.speed, Colors.white),
-                          ]
+                      Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                        child: Container(
+                          width: sizeW * 0.6,
+                          child: ListResult(veiculo.pilotos, "Pilots"),
+                        ),
                       ),
-//                      TableRow(children: [
-//                        Padding(
-//                          padding: EdgeInsets.symmetric(
-//                              vertical: 16, horizontal: 16),
-//                          child: Container(
-//                            width: sizeW * 0.6,
-//                            child: ListResult(veiculo.pilotos, "Pilots"),
-//                          ),
-//                        ),
-//                      ]),
-//                      TableRow(children: [
-//                        Padding(
-//                          padding: EdgeInsets.symmetric(
-//                              vertical: 16, horizontal: 16),
-//                          child: Container(
-//                            width: sizeW * 0.6,
-//                            child: ListResult(veiculo.filmes, "Films"),
-//                          ),
-//                        ),
-//                      ])
+                      Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                        child: Container(
+                          width: sizeW * 0.6,
+                          child: ListResult(veiculo.filmes, "Films"),
+                        ),
+                      ),
                     ],
                   ),
                 ),

@@ -242,7 +242,7 @@ class PageHero extends StatelessWidget {
                                     vertical: 16, horizontal: 16),
                                 child: Container(
                                   width: sizeW,
-                                  child: ListResult(pessoa.filmes, "Filmes"),
+                                  child: ListResult(pessoa.filmes, "Films"),
                                 ),
                               ),
                               Padding(

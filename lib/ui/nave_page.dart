@@ -8,6 +8,22 @@ class NavePage extends StatelessWidget {
   NavePage(this.nave);
   final Nave nave;
 
+  Widget paragraph(style, text, text2, colorFont) {
+    return RichText(
+        overflow: TextOverflow.ellipsis,
+        text: TextSpan(
+            style: style.headline2.copyWith(
+                color: colorFont, fontSize: 16.0, fontWeight: FontWeight.w500),
+            children: [
+              TextSpan(
+                text: text,
+              ),
+              TextSpan(
+                text: text2,
+              ),
+            ]));
+  }
+
   @override
   Widget build(BuildContext context) {
     var sizeW = MediaQuery.of(context).size.width;
@@ -16,8 +32,7 @@ class NavePage extends StatelessWidget {
     return SafeArea(
         child: Container(
           decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage("assets/images/ceu.png"))),
+              image: DecorationImage(image: AssetImage("assets/images/ceu.png"))),
           child: Scaffold(
             backgroundColor: Colors.white.withOpacity(0.01),
             body: SingleChildScrollView(
@@ -39,7 +54,7 @@ class NavePage extends StatelessWidget {
                         Padding(
                           padding: EdgeInsets.only(left: sizeW * 0.2),
                           child: Text(
-                            "Filme",
+                            "Vehicle",
                             style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         )
@@ -47,35 +62,87 @@ class NavePage extends StatelessWidget {
                     ),
                   ),
                   Padding(
+                    padding: EdgeInsets.only(top: 16),
+                    child: Stack(
+                      children: <Widget>[
+                        Image(
+                            height: MediaQuery.of(context).size.height * 0.3,
+                            width: MediaQuery.of(context).size.width,
+                            image: NetworkImage(
+                              "https://vignette.wikia.nocookie.net/starwars/images/3/38/Corvette_negvv.png/revision/latest?cb=20170410043658",
+                            )),
+                        Text(
+                          nave.nome,
+                          style: themeText.caption.copyWith(
+                              color: Colors.white,
+                              fontSize: 32,
+                              fontWeight: FontWeight.w700),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
                     padding: EdgeInsets.symmetric(
                         vertical: sizeH * 0.05, horizontal: sizeW * 0.1),
                     child: Container(
-                      padding: EdgeInsets.only(bottom: 18),
+                      width: sizeW,
+                      padding: EdgeInsets.symmetric(vertical: 18, horizontal: 8),
                       color: Colors.white.withOpacity(0.1),
                       child: Column(
                         children: <Widget>[
-                          Image.asset("assets/images/r2d2.png"),
-                          Text(nave.nome, style: themeText.caption.copyWith(color: Colors.white, fontSize: 20),),
-                          Text(nave.velocidadeMax, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16),),
-                          Text(nave.passageiros, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16),),
-                          Text(nave.tamanho, style: themeText.headline2.copyWith(color: Colors.yellowAccent, fontSize: 16),),
-                          Text(nave.modelo, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16),),
-                          Text(nave.manufatura, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16,), textAlign: TextAlign.center,),
-                          Text(nave.hyper, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16,), textAlign: TextAlign.center,),
-                          Text(nave.eTecnica, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16,), textAlign: TextAlign.center,),
-                          Text(nave.custo, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16,), textAlign: TextAlign.center,),
-                          Text(nave.classe, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16,), textAlign: TextAlign.center,),
-                          Text(nave.capacidade, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16,), textAlign: TextAlign.center,),
+                          Table(
+                            columnWidths: {2: FractionColumnWidth(.3)},
+                            children: [
+                              TableRow(children: [
+                                paragraph(themeText, "Model: ", nave.modelo,
+                                    Colors.white),
+                                paragraph(themeText, "Class: ", nave.classe,
+                                    Colors.white),
+                              ]),
+                              TableRow(children: [
+                                paragraph(themeText, "Cargo Capacity: ",
+                                    nave.capacidade, Colors.white),
+                                paragraph(themeText, "Consumables: ",
+                                    nave.consumo, Colors.white),
+                              ]),
+                              TableRow(children: [
+                                paragraph(themeText, "Cost: ", nave.custo,
+                                    Colors.white),
+                                paragraph(themeText, "Crew: ", nave.eTecnica,
+                                    Colors.white),
+                              ]),
+                              TableRow(children: [
+                                paragraph(themeText, "Hyperdrive: ", nave.hyper,
+                                    Colors.white),
+                                paragraph(themeText, "Manufacturer: ", nave.manufatura,
+                                    Colors.white),
+                              ]),
+                              TableRow(children: [
+                                paragraph(themeText, "MGLT: ", nave.mglt,
+                                    Colors.white),
+                                paragraph(themeText, "Passengers: ", nave.passageiros,
+                                    Colors.white),
+                              ]),
+                              TableRow(children: [
+                                paragraph(themeText, "Length: ", nave.tamanho,
+                                    Colors.white),
+                                paragraph(themeText, "Max Speed: ", nave.velocidadeMax,
+                                    Colors.white),
+                              ]),
+                            ],
+                          ),
                           Padding(
-                            padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                            padding:
+                            EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                             child: Container(
                               width: sizeW * 0.6,
-                              child: ListResult(nave.listFilm, "Filmes"),
+                              child: ListResult(nave.listFilm, "Films"),
                             ),
                           ),
                         ],
                       ),
-                    ),)
+                    ),
+                  )
                 ],
               ),
             ),

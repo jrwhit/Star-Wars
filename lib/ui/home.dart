@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:star_wars/model/Pessoa.dart';
+import 'package:star_wars/model/planeta.dart';
 import 'package:star_wars/service/conexao.dart';
 import 'package:star_wars/ui/page_hero.dart';
 import 'package:star_wars/util/constantes.dart';
@@ -53,18 +54,15 @@ class _HomeState extends State<Home> {
       ConexaoApi()
         ..carregarByNome(query)
             .then((value) {
-          log("search: ${value}", name: "log search");
           pessoa = Pessoa().fromMap(value["results"][0]);
-          pessoa.image = "asset/images/quinRetrato.png";
-        }).whenComplete(() {
-          log("Pesquisa concluida", name: "log pesquisa");
-          Navigator.of(context).push(
-              MaterialPageRoute<void>(
-                  builder: (BuildContext context) {
-                    return PageHero(pessoa);
-                  }
-              )
-          );
+          pessoa.image = "assets/images/quinRetrato.png";
+          ConexaoApi()
+              .carregarLink(value["results"][0]["homeworld"])
+              .then((planet) => pessoa.planeta = Planeta().fromMap(planet))
+              .whenComplete(() => Navigator.of(context)
+              .push(MaterialPageRoute(
+              builder: (context) =>
+                  PageHero(pessoa))));
         }).catchError((e) => print(e));
     }
   }

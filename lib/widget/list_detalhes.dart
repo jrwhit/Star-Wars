@@ -4,14 +4,13 @@ import 'package:flutter/widgets.dart';
 import 'package:star_wars/model/Pessoa.dart';
 import 'package:star_wars/model/film.dart';
 import 'package:star_wars/model/nave.dart';
+import 'package:star_wars/model/planeta.dart';
 import 'package:star_wars/model/veiculo.dart';
 import 'package:star_wars/service/conexao.dart';
 import 'package:star_wars/ui/filme_page.dart';
 import 'package:star_wars/ui/nave_page.dart';
 import 'package:star_wars/ui/page_hero.dart';
 import 'package:star_wars/ui/veiculo_page.dart';
-
-import 'circleAvatar.dart';
 
 class ListResult extends StatelessWidget {
   ListResult(this._list, this._title);
@@ -33,7 +32,6 @@ class ListResult extends StatelessWidget {
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height * 0.03,
-//                color: Colors.yellowAccent.withOpacity(0.1),
                   alignment: Alignment.centerLeft,
                   padding: EdgeInsets.only(left: 6),
                   child: Text(_title,
@@ -55,32 +53,53 @@ class ListResult extends StatelessWidget {
                     return GestureDetector(
                       onTap: () {
                         switch (result.type) {
+                          case "characters":
+                          case "pilots":
+                            Pessoa pessoa;
+                            ConexaoApi()
+                              ..carregarLink(_list[index]).then((value) {
+                                pessoa = Pessoa().fromMap(value);
+                                pessoa.image = "assets/images/quinRetrato.png";
+                                ConexaoApi()
+                                    .carregarLink(value["homeworld"])
+                                    .then((planet) => pessoa.planeta = Planeta().fromMap(planet))
+                                    .whenComplete(() => Navigator.of(context)
+                                        .push(MaterialPageRoute(
+                                            builder: (context) =>
+                                                PageHero(pessoa))));
+                              });
+                            break;
                           case "starships":
                             Nave nave;
-                            ConexaoApi()..carregarLink(_list[index]).
-                            then((value) => nave = Nave().fromMap(value))
-                                .whenComplete(() => Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => NavePage(
-                                    nave
-                                ))));
+                            ConexaoApi()
+                              ..carregarLink(_list[index])
+                                  .then((value) => nave = Nave().fromMap(value))
+                                  .whenComplete(() => Navigator.of(context)
+                                      .push(MaterialPageRoute(
+                                          builder: (context) =>
+                                              NavePage(nave))));
                             break;
-                          case "filmes":
+                          case "films":
                             Filme filme;
-                            ConexaoApi()..carregarLink(_list[index]).
-                            then((value) => filme = Filme().fromMap(value))
-                                .whenComplete(() => Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => PageFilm(
-                                    filme
-                                ))));
+                            ConexaoApi()
+                              ..carregarLink(_list[index])
+                                  .then(
+                                      (value) => filme = Filme().fromMap(value))
+                                  .whenComplete(() => Navigator.of(context)
+                                      .push(MaterialPageRoute(
+                                          builder: (context) =>
+                                              PageFilm(filme))));
                             break;
                           case "vehicles":
                             Veiculo veiculo;
-                            ConexaoApi()..carregarLink(_list[index]).
-                            then((value) => veiculo = Veiculo().fromMap(value))
-                                .whenComplete(() => Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => VeiculoPage(
-                                    veiculo
-                                ))));
+                            ConexaoApi()
+                              ..carregarLink(_list[index])
+                                  .then((value) =>
+                                      veiculo = Veiculo().fromMap(value))
+                                  .whenComplete(() => Navigator.of(context)
+                                      .push(MaterialPageRoute(
+                                          builder: (context) =>
+                                              VeiculoPage(veiculo))));
                             break;
                         }
                         print(_list[index]);
@@ -124,7 +143,12 @@ class ListResult extends StatelessWidget {
   Widget _build(request, context, title, link) {
     Map<String, dynamic> map = request;
     switch (title) {
-      case "Filmes":
+      case "Characters":
+      case "Pilots":
+        result = Result(map["name"], map["birth_year"],
+            map["gender"].toString(), link, title.toString().toLowerCase());
+        break;
+      case "Films":
         result = Result(map["title"], map["director"],
             map["episode_id"].toString(), link, title.toString().toLowerCase());
         break;
