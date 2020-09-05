@@ -58,7 +58,7 @@ class ListResult extends StatelessWidget {
                         switch (result.type) {
                           case "residents":
                           case "characters":
-                          case "people":
+                          case "peoples":
                           case "pilots":
                             Pessoa pessoa;
                             ConexaoApi()
