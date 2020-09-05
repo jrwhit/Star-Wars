@@ -55,7 +55,7 @@ class ListResult extends StatelessWidget {
                     return GestureDetector(
                       onTap: () {
                         switch (result.type) {
-                          case "naves":
+                          case "starships":
                             Nave nave;
                             ConexaoApi()..carregarLink(_list[index]).
                             then((value) => nave = Nave().fromMap(value))
@@ -73,7 +73,7 @@ class ListResult extends StatelessWidget {
                                     filme
                                 ))));
                             break;
-                          case "veiculos":
+                          case "vehicles":
                             Veiculo veiculo;
                             ConexaoApi()..carregarLink(_list[index]).
                             then((value) => veiculo = Veiculo().fromMap(value))
@@ -128,12 +128,12 @@ class ListResult extends StatelessWidget {
         result = Result(map["title"], map["director"],
             map["episode_id"].toString(), link, title.toString().toLowerCase());
         break;
-      case "Naves":
+      case "Starships":
         result = Result(map["name"], map["starship_class"], map["model"], link,
             title.toString().toLowerCase());
         result.nave = Nave().fromMap(map);
         break;
-      case "Veiculos":
+      case "Vehicles":
         result = Result(map["name"], map["vehicle_class"], map["model"], link,
             title.toString().toLowerCase());
         break;

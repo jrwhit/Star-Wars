@@ -74,11 +74,37 @@ class PageHero extends StatelessWidget {
                             children: <Widget>[
                               Padding(
                                 padding: EdgeInsets.symmetric(
-                                    vertical: 16, horizontal: 16),
+                                    vertical: 12, horizontal: 12),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: <Widget>[
+                                    RichText(
+                                        textAlign: TextAlign.center,
+                                        text: TextSpan(
+                                          children: <TextSpan>[
+                                            TextSpan(
+                                              text: "Planet\n",
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .subtitle1
+                                                  .copyWith(
+                                                  color: Colors.white,
+                                                  fontSize: sizeW * .025),
+                                            ),
+                                            TextSpan(
+                                              text: pessoa.planeta.nome,
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .subtitle1
+                                                  .copyWith(
+                                                color: Colors.white,
+                                                fontSize: 16,
+                                              ),
+                                            )
+                                          ],
+                                        )),
+                                    SizedBox(width: 10),
                                     RichText(
                                         textAlign: TextAlign.center,
                                         text: TextSpan(
@@ -224,7 +250,7 @@ class PageHero extends StatelessWidget {
                                 child: Container(
                                   alignment: Alignment.centerLeft,
                                   width: sizeW,
-                                  child: ListResult(pessoa.naves, "Naves"),
+                                  child: ListResult(pessoa.naves, "Starships"),
                                 ),
                               ),
                               Padding(
@@ -233,7 +259,7 @@ class PageHero extends StatelessWidget {
                                 child: Container(
                                   width: sizeW,
                                   child:
-                                  ListResult(pessoa.veiculos, "Veiculos"),
+                                  ListResult(pessoa.veiculos, "Vehicles"),
                                 ),
                               )
                             ],

@@ -30,7 +30,6 @@ class ConexaoApi {
     try{
       response = await dio.get(rota);
       print("retorno link ${response.data}");
-      print("aaaa ${response.data["title"]}");
       return response.data;
     }catch(e){
       print(e);

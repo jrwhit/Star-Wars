@@ -15,76 +15,179 @@ class VeiculoPage extends StatelessWidget {
     var themeText = Theme.of(context).textTheme;
     return SafeArea(
         child: Container(
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage("asset/images/background/ceu.png"))),
-          child: Scaffold(
-            backgroundColor: Colors.white.withOpacity(0.01),
-            body: SingleChildScrollView(
-              child: Column(
-                children: <Widget>[
-                  Card(
-                    color: Colors.white.withOpacity(0.1),
-                    elevation: 0,
-                    child: Row(
-                      children: <Widget>[
-                        IconButton(
-                            icon: Icon(
-                              Icons.arrow_back,
-                              color: Colors.white,
-                            ),
-                            onPressed: () {
-                              Navigator.of(context).pop();
-                            }),
-                        Padding(
-                          padding: EdgeInsets.only(left: sizeW * 0.2),
-                          child: Text(
-                            "Filme",
-                            style: TextStyle(color: Colors.white, fontSize: 16),
-                          ),
-                        )
-                      ],
+      decoration: BoxDecoration(
+          image: DecorationImage(image: AssetImage("assets/images/ceu.png"))),
+      child: Scaffold(
+        backgroundColor: Colors.white.withOpacity(0.01),
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Card(
+                color: Colors.white.withOpacity(0.1),
+                elevation: 0,
+                child: Row(
+                  children: <Widget>[
+                    IconButton(
+                        icon: Icon(
+                          Icons.arrow_back,
+                          color: Colors.white,
+                        ),
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        }),
+                    Padding(
+                      padding: EdgeInsets.only(left: sizeW * 0.2),
+                      child: Text(
+                        "Veiculo",
+                        style: TextStyle(color: Colors.white, fontSize: 16),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 16),
+                child: Stack(
+                  children: <Widget>[
+                    Image(
+                        height: MediaQuery.of(context).size.height * 0.3,
+                        width: MediaQuery.of(context).size.width,
+                        image: NetworkImage(
+                          "https://vignette.wikia.nocookie.net/starwars/images/2/27/Rebel_snowspeeder_SWL.png/revision/latest?cb=20190515060930",
+                        )),
+                    Text(
+                      veiculo.nome,
+                      style: themeText.caption.copyWith(
+                          color: Colors.white,
+                          fontSize: 32,
+                          fontWeight: FontWeight.w700),
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                        vertical: sizeH * 0.05, horizontal: sizeW * 0.1),
-                    child: Container(
-                      padding: EdgeInsets.only(bottom: 18),
-                      color: Colors.white.withOpacity(0.1),
-                      child: Column(
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                    vertical: sizeH * 0.05, horizontal: sizeW * 0.1),
+                child: Container(
+                  width: sizeW,
+                  padding: EdgeInsets.only(bottom: 18),
+                  color: Colors.white.withOpacity(0.1),
+                  child: Column(
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Image.asset("asset/images/etc/r2d2.png"),
-                          Text(veiculo.nome, style: themeText.caption.copyWith(color: Colors.white, fontSize: 20),),
-                          Text(veiculo.capacidade, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16),),
-                          Text(veiculo.classe, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16),),
-                          Text(veiculo.custo, style: themeText.headline2.copyWith(color: Colors.yellowAccent, fontSize: 16),),
-                          Text(veiculo.modelo, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16),),
-                          Text(veiculo.passageiros, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16,), textAlign: TextAlign.center,),
-                          Text(veiculo.consumables, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16,), textAlign: TextAlign.center,),
-                          Text(veiculo.crew, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16,), textAlign: TextAlign.center,),
-                          Text(veiculo.speed, style: themeText.headline2.copyWith(color: Colors.white, fontSize: 16,), textAlign: TextAlign.center,),
-                          Padding(
-                            padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-                            child: Container(
-                              width: sizeW * 0.6,
-                              child: ListResult(veiculo.pilotos, "Pilotos"),
-                            ),
+                          Text(
+                            "Capacity: ",
+                            style: themeText.headline2.copyWith(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500),
                           ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-                            child: Container(
-                              width: sizeW * 0.6,
-                              child: ListResult(veiculo.filmes, "Filmes"),
-                            ),
+                          Text(
+                            veiculo.capacidade,
+                            style: themeText.headline2
+                                .copyWith(color: Colors.white, fontSize: 16),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Class: ",
+                            style: themeText.headline2.copyWith(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500),
+                          ),
+                          Text(
+                            veiculo.classe,
+                            style: themeText.headline2
+                                .copyWith(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
-                    ),)
-                ],
-              ),
-            ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            "Cost: ",
+                            style: themeText.headline2
+                                .copyWith(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w500),
+                          ),
+                          Text(
+                            veiculo.custo,
+                            style: themeText.headline2
+                                .copyWith(color: Colors.white, fontSize: 16),
+                          ),
+                          SizedBox(width: 10,),
+                          Text(
+                            "Model: ",
+                            style: themeText.headline2
+                                .copyWith(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w500),
+                          ),
+                          Text(
+                            veiculo.modelo,overflow: TextOverflow.clip,
+                            style: themeText.headline2
+                                .copyWith(color: Colors.white, fontSize: 16,),
+                          ),
+                        ],
+                      ),
+                      Text(
+                        veiculo.passageiros,
+                        style: themeText.headline2.copyWith(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      Text(
+                        veiculo.consumables,
+                        style: themeText.headline2.copyWith(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      Text(
+                        veiculo.crew,
+                        style: themeText.headline2.copyWith(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      Text(
+                        veiculo.speed,
+                        style: themeText.headline2.copyWith(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                        child: Container(
+                          width: sizeW * 0.6,
+                          child: ListResult(veiculo.pilotos, "Pilotos"),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                        child: Container(
+                          width: sizeW * 0.6,
+                          child: ListResult(veiculo.filmes, "Filmes"),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            ],
           ),
-        ));
+        ),
+      ),
+    ));
   }
 }

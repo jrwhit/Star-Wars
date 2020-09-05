@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:star_wars/model/Pessoa.dart';
 import 'package:star_wars/model/film.dart';
 import 'package:star_wars/model/nave.dart';
+import 'package:star_wars/model/planeta.dart';
 import 'package:star_wars/model/veiculo.dart';
+import 'package:star_wars/service/conexao.dart';
 import 'package:star_wars/ui/page_hero.dart';
 
 import 'circleAvatar.dart';
@@ -80,13 +82,15 @@ class Carousel extends StatelessWidget {
                       ),
                     ),
                     onTap: (){
-                      Navigator.of(context).push(
+                      ConexaoApi()..carregarLink(map["results"][index]["homeworld"])
+                          .then((value) => pessoa.planeta = Planeta().fromMap(value))
+                          .whenComplete(() => Navigator.of(context).push(
                           MaterialPageRoute<void>(
                               builder: (BuildContext context) {
                                 return PageHero(pessoa);
                               }
                           )
-                      );
+                      ));
                     },
                   );
                 }),

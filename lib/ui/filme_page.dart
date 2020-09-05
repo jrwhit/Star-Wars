@@ -17,7 +17,7 @@ class PageFilm extends StatelessWidget {
         child: Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("asset/images/background/ceu.png"))),
+              image: AssetImage("assets/images/ceu.png"))),
       child: Scaffold(
         backgroundColor: Colors.white.withOpacity(0.01),
         body: SingleChildScrollView(
