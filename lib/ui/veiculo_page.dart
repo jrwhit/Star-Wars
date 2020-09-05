@@ -8,6 +8,23 @@ class VeiculoPage extends StatelessWidget {
   VeiculoPage(this.veiculo);
   final Veiculo veiculo;
 
+  Widget paragraph(style, text, text2, colorFont){
+    return RichText(
+        overflow: TextOverflow.ellipsis,
+        text: TextSpan(
+            style: style.headline2.copyWith(
+                color: colorFont,
+                fontSize: 16.0,
+                fontWeight: FontWeight.w500),
+            children: [
+              TextSpan(
+                text: text,
+              ),
+              TextSpan(
+                text: text2,
+              ),
+            ]));
+  }
   @override
   Widget build(BuildContext context) {
     var sizeW = MediaQuery.of(context).size.width;
@@ -70,116 +87,47 @@ class VeiculoPage extends StatelessWidget {
                     vertical: sizeH * 0.05, horizontal: sizeW * 0.1),
                 child: Container(
                   width: sizeW,
-                  padding: EdgeInsets.only(bottom: 18),
+                  padding: EdgeInsets.symmetric(vertical: 18, horizontal: 8),
                   color: Colors.white.withOpacity(0.1),
-                  child: Column(
-                    children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text(
-                            "Capacity: ",
-                            style: themeText.headline2.copyWith(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500),
-                          ),
-                          Text(
-                            veiculo.capacidade,
-                            style: themeText.headline2
-                                .copyWith(color: Colors.white, fontSize: 16),
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Text(
-                            "Class: ",
-                            style: themeText.headline2.copyWith(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500),
-                          ),
-                          Text(
-                            veiculo.classe,
-                            style: themeText.headline2
-                                .copyWith(color: Colors.white, fontSize: 16),
-                          ),
-                        ],
+                  child: Table(
+                    columnWidths: {2: FractionColumnWidth(.3)},
+                    children: [
+                      TableRow(children: [
+                        paragraph(themeText, "Cost: ", veiculo.custo, Colors.white),
+                        paragraph(themeText, "Model: ", veiculo.modelo, Colors.white),
+                      ]),
+                      TableRow(
+                        children: [
+                          paragraph(themeText, "Passengers: ", veiculo.passageiros, Colors.white),
+                          paragraph(themeText, "Consumables: ", veiculo.consumables, Colors.white),
+                        ]
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text(
-                            "Cost: ",
-                            style: themeText.headline2
-                                .copyWith(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w500),
-                          ),
-                          Text(
-                            veiculo.custo,
-                            style: themeText.headline2
-                                .copyWith(color: Colors.white, fontSize: 16),
-                          ),
-                          SizedBox(width: 10,),
-                          Text(
-                            "Model: ",
-                            style: themeText.headline2
-                                .copyWith(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w500),
-                          ),
-                          Text(
-                            veiculo.modelo,overflow: TextOverflow.clip,
-                            style: themeText.headline2
-                                .copyWith(color: Colors.white, fontSize: 16,),
-                          ),
-                        ],
+                      TableRow(
+                          children: [
+                            paragraph(themeText, "Crew: ", veiculo.crew, Colors.white),
+                            paragraph(themeText, "Speed: ", veiculo.speed, Colors.white),
+                          ]
                       ),
-                      Text(
-                        veiculo.passageiros,
-                        style: themeText.headline2.copyWith(
-                          color: Colors.white,
-                          fontSize: 16,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      Text(
-                        veiculo.consumables,
-                        style: themeText.headline2.copyWith(
-                          color: Colors.white,
-                          fontSize: 16,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      Text(
-                        veiculo.crew,
-                        style: themeText.headline2.copyWith(
-                          color: Colors.white,
-                          fontSize: 16,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      Text(
-                        veiculo.speed,
-                        style: themeText.headline2.copyWith(
-                          color: Colors.white,
-                          fontSize: 16,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      Padding(
-                        padding:
-                            EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-                        child: Container(
-                          width: sizeW * 0.6,
-                          child: ListResult(veiculo.pilotos, "Pilotos"),
-                        ),
-                      ),
-                      Padding(
-                        padding:
-                            EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-                        child: Container(
-                          width: sizeW * 0.6,
-                          child: ListResult(veiculo.filmes, "Filmes"),
-                        ),
-                      ),
+//                      TableRow(children: [
+//                        Padding(
+//                          padding: EdgeInsets.symmetric(
+//                              vertical: 16, horizontal: 16),
+//                          child: Container(
+//                            width: sizeW * 0.6,
+//                            child: ListResult(veiculo.pilotos, "Pilots"),
+//                          ),
+//                        ),
+//                      ]),
+//                      TableRow(children: [
+//                        Padding(
+//                          padding: EdgeInsets.symmetric(
+//                              vertical: 16, horizontal: 16),
+//                          child: Container(
+//                            width: sizeW * 0.6,
+//                            child: ListResult(veiculo.filmes, "Films"),
+//                          ),
+//                        ),
+//                      ])
                     ],
                   ),
                 ),

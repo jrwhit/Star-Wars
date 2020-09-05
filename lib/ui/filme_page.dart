@@ -17,7 +17,7 @@ class PageFilm extends StatelessWidget {
         child: Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/images/ceu.png"))),
+              image: NetworkImage("https://wallpapers.moviemania.io/phone/movie/181812/877f43/star-wars-the-rise-of-skywalker-phone-wallpaper.jpg?w=1536&h=2732"))),
       child: Scaffold(
         backgroundColor: Colors.white.withOpacity(0.01),
         body: SingleChildScrollView(
