@@ -5,7 +5,7 @@ import 'package:star_wars/model/nave.dart';
 import 'package:star_wars/model/planeta.dart';
 import 'package:star_wars/model/veiculo.dart';
 import 'package:star_wars/service/conexao.dart';
-import 'package:star_wars/ui/page_hero.dart';
+import 'package:star_wars/ui/people_page.dart';
 
 import 'circleAvatar.dart';
 

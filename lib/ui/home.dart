@@ -6,7 +6,7 @@ import 'package:flutter/widgets.dart';
 import 'package:star_wars/model/Pessoa.dart';
 import 'package:star_wars/model/planeta.dart';
 import 'package:star_wars/service/conexao.dart';
-import 'package:star_wars/ui/page_hero.dart';
+import 'package:star_wars/ui/people_page.dart';
 import 'package:star_wars/util/constantes.dart';
 import 'package:star_wars/widget/carousel_home.dart';
 

@@ -2,14 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:star_wars/model/Pessoa.dart';
+import 'package:star_wars/model/especie.dart';
 import 'package:star_wars/model/film.dart';
 import 'package:star_wars/model/nave.dart';
 import 'package:star_wars/model/planeta.dart';
 import 'package:star_wars/model/veiculo.dart';
 import 'package:star_wars/service/conexao.dart';
+import 'package:star_wars/ui/especie_page.dart';
 import 'package:star_wars/ui/filme_page.dart';
 import 'package:star_wars/ui/nave_page.dart';
-import 'package:star_wars/ui/page_hero.dart';
+import 'package:star_wars/ui/people_page.dart';
+import 'package:star_wars/ui/planet_page.dart';
 import 'package:star_wars/ui/veiculo_page.dart';
 
 class ListResult extends StatelessWidget {
@@ -53,7 +56,9 @@ class ListResult extends StatelessWidget {
                     return GestureDetector(
                       onTap: () {
                         switch (result.type) {
+                          case "residents":
                           case "characters":
+                          case "people":
                           case "pilots":
                             Pessoa pessoa;
                             ConexaoApi()
@@ -101,6 +106,31 @@ class ListResult extends StatelessWidget {
                                           builder: (context) =>
                                               VeiculoPage(veiculo))));
                             break;
+                          case "planets":
+                            Planeta planeta;
+                            ConexaoApi()
+                              ..carregarLink(_list[index])
+                                  .then((value) =>
+                              planeta = Planeta().fromMap(value))
+                                  .whenComplete(() => Navigator.of(context)
+                                  .push(MaterialPageRoute(
+                                  builder: (context) =>
+                                      PlanetPage(planeta))));
+                            break;
+                          case "species":
+                            Especie especie;
+                            ConexaoApi()
+                              ..carregarLink(_list[index]).then((value) {
+                                especie = Especie().fromMap(value);
+                                ConexaoApi()
+                                    .carregarLink(value["homeworld"])
+                                    .then((planet) => especie.mundo = Planeta().fromMap(planet))
+                                    .whenComplete(() => Navigator.of(context)
+                                    .push(MaterialPageRoute(
+                                    builder: (context) =>
+                                        SpeciePage(especie))));
+                              });
+                            break;
                         }
                         print(_list[index]);
                       },
@@ -143,7 +173,9 @@ class ListResult extends StatelessWidget {
   Widget _build(request, context, title, link) {
     Map<String, dynamic> map = request;
     switch (title) {
+      case "Residents":
       case "Characters":
+      case "Peoples":
       case "Pilots":
         result = Result(map["name"], map["birth_year"],
             map["gender"].toString(), link, title.toString().toLowerCase());
