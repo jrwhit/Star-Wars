@@ -161,6 +161,14 @@ class ListResult extends StatelessWidget {
         result = Result(map["name"], map["vehicle_class"], map["model"], link,
             title.toString().toLowerCase());
         break;
+      case "Planets":
+        result = Result(map["name"], map["climate"], map["terrain"], link,
+            title.toString().toLowerCase());
+        break;
+      case "Species":
+        result = Result(map["name"], map["language"], map["classification"], link,
+            title.toString().toLowerCase());
+        break;
     }
     return SizedBox(
       width: MediaQuery.of(context).size.width * 0.65,
