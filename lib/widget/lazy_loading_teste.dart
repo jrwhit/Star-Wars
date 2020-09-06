@@ -28,6 +28,7 @@ class _LazyLoadingState extends State<LazyLoading> {
   bool isLoading = false;
   List users = new List();
   final dio = new Dio();
+  bool fimList = false;
 
   @override
   void initState() {
@@ -48,26 +49,34 @@ class _LazyLoadingState extends State<LazyLoading> {
   }
 
   void _getMoreData(int index) async {
-    if (!isLoading) {
-      setState(() {
-        isLoading = true;
-      });
-      var url = "https://swapi.dev/api/species/?page=" +
-          index.toString();
-      print(url);
-      final response = await dio.get(url);
-      List tList = new List();
-      if(!response.data.containsKey('results')){
-        //
-      }else{
+    if(fimList){
+
+    }else{
+      if (!isLoading) {
+        setState(() {
+          isLoading = true;
+        });
+        var url = "https://swapi.dev/api/species/?page=" +
+            index.toString();
+        print(url);
+        final response = await dio.get(url);
+        List tList = new List();
         for (int i = 0; i < response.data['results'].length; i++) {
           tList.add(response.data['results'][i]);
         }
-        setState(() {
-          isLoading = false;
-          users.addAll(tList);
-          page++;
-        });
+        if(response.data['next'] == null){
+          setState(() {
+            isLoading = false;
+            users.addAll(tList);
+            fimList = true;
+          });
+        }else{
+          setState(() {
+            isLoading = false;
+            users.addAll(tList);
+            page++;
+          });
+        }
       }
     }
   }
