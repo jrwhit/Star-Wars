@@ -14,9 +14,17 @@ import 'package:star_wars/ui/nave_page.dart';
 import 'package:star_wars/ui/people_page.dart';
 import 'package:star_wars/ui/planet_page.dart';
 import 'package:star_wars/ui/veiculo_page.dart';
+class ListResult extends StatefulWidget {
+  ListResult(this.list, this.title);
+  List<String> list;
+  String title;
 
-class ListResult extends StatelessWidget {
-  ListResult(this._list, this._title);
+  @override
+  _ListResultState createState() => _ListResultState(list, title);
+}
+
+class _ListResultState extends State<ListResult> with AutomaticKeepAliveClientMixin{
+  _ListResultState(this._list, this._title);
   List<String> _list;
   String _title;
   Result result;
@@ -46,10 +54,12 @@ class ListResult extends StatelessWidget {
             Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * 0.2,
-              padding: EdgeInsets.symmetric(vertical: 10),
               child: ListView.builder(
-                  physics: AlwaysScrollableScrollPhysics(),
-                  reverse: false,
+                  controller: ScrollController(
+                  ),
+                  physics: ScrollPhysics(),
+                  shrinkWrap: true,
+                  itemExtent: MediaQuery.of(context).size.width * 0.6,
                   scrollDirection: Axis.horizontal,
                   itemCount: _list.length,
                   itemBuilder: (context, index) {
@@ -96,7 +106,7 @@ class ListResult extends StatelessWidget {
                                 ConexaoApi()
                                     .carregarLink(value["homeworld"])
                                     .then((planet) => pessoa.planeta =
-                                        Planeta().fromMap(planet))
+                                    Planeta().fromMap(planet))
                                     .whenComplete(() {
                                   Navigator.of(context).pop();
                                   Navigator.of(context).push(MaterialPageRoute(
@@ -132,7 +142,7 @@ class ListResult extends StatelessWidget {
                             ConexaoApi()
                               ..carregarLink(_list[index])
                                   .then((value) =>
-                                      veiculo = Veiculo().fromMap(value))
+                              veiculo = Veiculo().fromMap(value))
                                   .whenComplete(() {
                                 Navigator.of(context).pop();
                                 Navigator.of(context).push(MaterialPageRoute(
@@ -145,7 +155,7 @@ class ListResult extends StatelessWidget {
                             ConexaoApi()
                               ..carregarLink(_list[index])
                                   .then((value) =>
-                                      planeta = Planeta().fromMap(value))
+                              planeta = Planeta().fromMap(value))
                                   .whenComplete(() {
                                 Navigator.of(context).pop();
                                 Navigator.of(context).push(MaterialPageRoute(
@@ -160,7 +170,7 @@ class ListResult extends StatelessWidget {
                                 ConexaoApi()
                                     .carregarLink(value["homeworld"])
                                     .then((planet) => especie.mundo =
-                                        Planeta().fromMap(planet))
+                                    Planeta().fromMap(planet))
                                     .whenComplete(() {
                                   Navigator.of(context).pop();
                                   Navigator.of(context).push(MaterialPageRoute(
@@ -195,7 +205,7 @@ class ListResult extends StatelessWidget {
                 height: 500.0,
                 alignment: Alignment.center,
                 child: CircularProgressIndicator(
-                  valueColor: AlwaysStoppedAnimation<Color>(Colors.black87),
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.red),
                   strokeWidth: 5.0,
                 ),
               );
@@ -240,14 +250,9 @@ class ListResult extends StatelessWidget {
             link, title.toString().toLowerCase());
         break;
     }
-    return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.65,
-      height: 50,
-      child: Container(
-        margin: EdgeInsets.symmetric(vertical: 4, horizontal: 10),
-        width: 100,
-        height: 100,
-        color: Colors.blue.withOpacity(0.1),
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 10),
+      color: Colors.blue.withOpacity(0.1),
         child: Flex(
           direction: Axis.horizontal,
           mainAxisSize: MainAxisSize.min,
@@ -281,12 +286,12 @@ class ListResult extends StatelessWidget {
             )
           ],
         ),
-      ),
     );
   }
-  //film:title, dataLancamento, diretor
-  //nave:nome, modelo, class
-  //veiculo:nome, modelo, class
+
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
 }
 
 class Result {
@@ -294,5 +299,6 @@ class Result {
   Nave nave;
   Filme film;
   Veiculo veiculo;
+
   Result(this.titulo, this.subtitulo, this.trailing, this.link, this.type);
 }

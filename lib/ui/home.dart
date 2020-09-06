@@ -1,10 +1,7 @@
-import 'dart:developer';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:loading_overlay/loading_overlay.dart';
 import 'package:star_wars/model/Pessoa.dart';
 import 'package:star_wars/model/planeta.dart';
 import 'package:star_wars/service/conexao.dart';
@@ -82,6 +79,7 @@ class _HomeState extends State<Home> {
           ),
         ));
     if (query.toString().isEmpty) {
+      Navigator.of(context).pop();
     } else if (query.toString().isNotEmpty) {
       Pessoa pessoa;
       ConexaoApi()
@@ -241,3 +239,9 @@ class _HomeState extends State<Home> {
 
 /*
 * 889597033935-26lot9opbmg276lhu31g73ablct6rvdm.apps.googleusercontent.com*/
+/*google search api: AIzaSyBdNXOihcWDODmOwDVjlvJZJ81kvZBucvA*/
+/*serach id: 85b23a522ef724a5d*/
+
+
+/*
+* https://www.googleapis.com/customsearch/v1?key=AIzaSyBdNXOihcWDODmOwDVjlvJZJ81kvZBucvA&cx=85b23a522ef724a5d&q=flower&searchType=image&fileType=png&imgSize=small&alt=json*/
