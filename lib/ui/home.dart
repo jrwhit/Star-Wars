@@ -23,7 +23,7 @@ class _HomeState extends State<Home> {
   FocusNode focus;
   PesquisaStore store;
   ConexaoApi api;
-  Future cPeoples;
+  Future cPeoples, cNaves, cFilmes, cVeiculos;
   bool loading;
 
   @override
@@ -37,6 +37,9 @@ class _HomeState extends State<Home> {
     store = PesquisaStore();
     api = ConexaoApi();
     cPeoples = api.carregarPessoas();
+    cFilmes = api.carregarFilmes();
+    cNaves = api.carregarNaves();
+    cVeiculos = api.carregarVeiculos();
     // TODO: implement initState
     super.initState();
   }
@@ -198,10 +201,10 @@ class _HomeState extends State<Home> {
                             ],
                           ),
                           Divider(),
-                          Carousel(cPeoples, sW, "Jedis"),
-                          Carousel(cPeoples, sW, "Filmes"),
-                          Carousel(cPeoples, sW, "Naves"),
-                          Carousel(cPeoples, sW, "Veículos"),
+                          Carousel(cPeoples, sW, "Peoples"),
+                          Carousel(cFilmes, sW, "Films"),
+                          Carousel(cNaves, sW, "Starships"),
+                          Carousel(cVeiculos, sW, "Vehicles"),
                         ],
                       ),
                     ),

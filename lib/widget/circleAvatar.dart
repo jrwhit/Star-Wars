@@ -21,7 +21,6 @@ class _TileResultState extends State<TileResult> {
   @override
   Widget build(BuildContext context) {
     var sH = MediaQuery.of(context).size.height;
-    var sW = MediaQuery.of(context).size.width;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[

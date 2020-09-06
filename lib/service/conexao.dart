@@ -17,6 +17,33 @@ class ConexaoApi {
       print(e);
     }
   }
+  Future carregarFilmes<Map>()async{
+    try{
+      response = await dio.get(_request.getFilms());
+      print("retorno filmes ${response.data}");
+      return response.data;
+    }catch(e){
+      print(e);
+    }
+  }
+  Future carregarNaves<Map>()async{
+    try{
+      response = await dio.get(_request.getStarships());
+      print("retorno naves ${response.data}");
+      return response.data;
+    }catch(e){
+      print(e);
+    }
+  }
+  Future carregarVeiculos<Map>()async{
+    try{
+      response = await dio.get(_request.getVehicles());
+      print("retorno veiculos ${response.data}");
+      return response.data;
+    }catch(e){
+      print(e);
+    }
+  }
   Future carregarByNome<Map>(String nome)async{
     try{
       response = await dio.get(_request.getByNome()+nome);
