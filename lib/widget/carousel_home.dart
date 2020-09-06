@@ -11,10 +11,18 @@ import 'package:star_wars/ui/nave_page.dart';
 import 'package:star_wars/ui/people_page.dart';
 import 'package:star_wars/ui/veiculo_page.dart';
 
-import 'circleAvatar.dart';
-
-class Carousel extends StatelessWidget {
+class Carousel extends StatefulWidget {
   Carousel(this.future, this.sW, this.title);
+  Future future;
+  var sW;
+  String title;
+
+  @override
+  _CarouselState createState() => _CarouselState(future, sW, title);
+}
+
+class _CarouselState extends State<Carousel> {
+  _CarouselState(this.future, this.sW, this.title);
   Future future;
   var sW;
   String title;

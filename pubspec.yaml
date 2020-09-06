@@ -18,6 +18,7 @@ dependencies:
   mobx: ^1.1.1
   flutter_mobx: ^1.1.0
   dio: ^3.0.9
+  lazy_load_scrollview: ^1.1.0
 
 dev_dependencies:
   flutter_test:
