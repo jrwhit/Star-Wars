@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:star_wars/model/Pessoa.dart';
 import 'package:star_wars/model/planeta.dart';
 import 'package:star_wars/service/conexao.dart';
+import 'package:star_wars/service/rotas.dart';
 import 'package:star_wars/ui/people_page.dart';
 import 'package:star_wars/util/constantes.dart';
 import 'package:star_wars/widget/carousel_home.dart';
@@ -22,7 +23,7 @@ class _HomeState extends State<Home> {
   FocusNode focus;
   PesquisaStore store;
   ConexaoApi api;
-  Future cPeoples, cNaves, cFilmes, cVeiculos;
+//  Future cPeoples, cNaves, cFilmes, cVeiculos;
   bool loading;
   final _scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -36,10 +37,10 @@ class _HomeState extends State<Home> {
     });
     store = PesquisaStore();
     api = ConexaoApi();
-    cPeoples = api.carregarPessoas();
-    cFilmes = api.carregarFilmes();
-    cNaves = api.carregarNaves();
-    cVeiculos = api.carregarVeiculos();
+//    cPeoples = api.carregarPessoas();
+//    cFilmes = api.carregarFilmes();
+//    cNaves = api.carregarNaves();
+//    cVeiculos = api.carregarVeiculos();
     // TODO: implement initState
     super.initState();
   }
@@ -215,8 +216,11 @@ class _HomeState extends State<Home> {
                             ],
                           ),
                           Divider(),
+                          LazyLoading("Peoples", Rotas().getPeople()),
+                          LazyLoading("Films", Rotas().getFilms()),
+                          LazyLoading("Starships", Rotas().getStarships()),
+                          LazyLoading("Vehicles", Rotas().getVehicles()),
 //                          Carousel(cPeoples, sW, "Peoples"),
-                          LazyLoading()
 //                          Carousel(cFilmes, sW, "Films"),
 //                          Carousel(cNaves, sW, "Starships"),
 //                          Carousel(cVeiculos, sW, "Vehicles"),

@@ -151,8 +151,8 @@ class _CarouselState extends State<Carousel> {
                       showDialog(
                           barrierDismissible: false,
                           context: context,
-                          builder: (_) => new Dialog(
-                            child: new Container(
+                          builder: (_) => Dialog(
+                            child: Container(
                               decoration: BoxDecoration(
                                   image: DecorationImage(
                                       image: AssetImage(
@@ -161,22 +161,10 @@ class _CarouselState extends State<Carousel> {
                               alignment: FractionalOffset.center,
                               height: sW * 0.5,
                               width: sW * 0.2,
-                              padding: const EdgeInsets.all(20.0),
-                              child: new Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment:
-                                CrossAxisAlignment.center,
-                                children: [
-                                  new Padding(
-                                    padding:
-                                    new EdgeInsets.only(left: 10.0),
-                                    child: new Text(
-                                      "Loading",
-                                      style: TextStyle(color: Colors.white),
-                                    ),
-                                  ),
-                                  new CircularProgressIndicator(),
-                                ],
+                              padding: EdgeInsets.all(20.0),
+                              child: CircularProgressIndicator(
+                                valueColor: AlwaysStoppedAnimation<Color>(Colors.red),
+                                strokeWidth: 5.0,
                               ),
                             ),
                           ));

@@ -56,7 +56,7 @@ class NavePage extends StatelessWidget {
                             Padding(
                               padding: EdgeInsets.only(left: sizeW * 0.2),
                               child: Text(
-                                "Vehicle",
+                                "Starships",
                                 style: TextStyle(color: Colors.white, fontSize: 16),
                               ),
                             )

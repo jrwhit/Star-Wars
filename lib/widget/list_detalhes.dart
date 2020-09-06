@@ -68,8 +68,8 @@ class _ListResultState extends State<ListResult> with AutomaticKeepAliveClientMi
                         showDialog(
                             barrierDismissible: false,
                             context: context,
-                            builder: (_) => new Dialog(
-                              child: new Container(
+                            builder: (_) => Dialog(
+                              child: Container(
                                 decoration: BoxDecoration(
                                     image: DecorationImage(
                                         image: AssetImage("assets/images/loading.gif"),
@@ -79,16 +79,19 @@ class _ListResultState extends State<ListResult> with AutomaticKeepAliveClientMi
                                 alignment: FractionalOffset.center,
                                 height: MediaQuery.of(context).size.width * 0.5,
                                 width: MediaQuery.of(context).size.width * 0.2,
-                                padding: const EdgeInsets.all(20.0),
-                                child: new Column(
+                                padding: EdgeInsets.all(20.0),
+                                child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    new Padding(
-                                      padding: new EdgeInsets.only(left: 10.0),
-                                      child: new Text("Loading", style: TextStyle(color: Colors.white),),
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 10.0),
+                                      child: Text(" ", style: TextStyle(color: Colors.white),),
                                     ),
-                                    new CircularProgressIndicator(),
+                                    CircularProgressIndicator(
+                                      valueColor: AlwaysStoppedAnimation<Color>(Colors.red),
+                                      strokeWidth: 5.0,
+                                    ),
                                   ],
                                 ),
                               ),
