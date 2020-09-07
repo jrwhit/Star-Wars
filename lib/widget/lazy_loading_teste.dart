@@ -34,6 +34,7 @@ class _LazyLoadingState extends State<LazyLoading> {
   bool fimList = false;
   Result result;
 
+
   @override
   void initState() {
     this._getMoreData(page);
@@ -159,7 +160,10 @@ class _LazyLoadingState extends State<LazyLoading> {
               break;
           }
 //                  var pessoa = Pessoa().fromMap(map['results'][index]);
-          result.image = "assets/images/quinRetrato.png";
+          ConexaoApi().carregarImages(result.titulo)
+              .then((value){
+                result.image = value;
+          }).whenComplete(() => log(result.image, name: "Image"));
           return GestureDetector(
             child: Container(
               margin: EdgeInsets.symmetric(horizontal: 10),
@@ -170,7 +174,7 @@ class _LazyLoadingState extends State<LazyLoading> {
                     radius: MediaQuery.of(context).size.height * .09,
                     backgroundColor: Colors.white.withOpacity(0.2),
                     backgroundImage: NetworkImage(
-                        "https://img2.wikia.nocookie.net/__cb20100915165213/starwars/images/8/84/QuiGonJinn-SWSB.png"),
+                        result.image != null ? result.image : "https://cdn.onlinewebfonts.com/svg/img_504570.png"),
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 10),
