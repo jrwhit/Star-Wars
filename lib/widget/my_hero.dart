@@ -18,10 +18,9 @@ class MyHero extends StatelessWidget {
           child: InkWell(
 
             onTap: _onTap,
-            child: Image.asset(
+            child: Image.network(
               _photo,
-              fit: BoxFit.contain,
-            ),
+              fit: BoxFit.fitHeight,),
           ),
         ),
       ),

@@ -62,225 +62,226 @@ class _PageHeroState extends State<PageHero> {
                       ),
                       Padding(
                         padding: EdgeInsets.only(top: sizeH * 0.04),
-                        child: Stack(
-                          children: <Widget>[
-                            Card(
-                              elevation: 3,
-                              color: Colors.white.withOpacity(0.01),
-                              child: Column(
-                                children: <Widget>[
-                                  MyHero(
-                                    photo: pessoa.image,
-                                    onTap: () {
-                                      Navigator.of(context).pop();
-                                    },
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Positioned(
-                                top: sizeH * .0003,
-                                child: SingleChildScrollView(child: Card(
-                                  color: Colors.white.withOpacity(.1),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      Padding(
-                                        padding: EdgeInsets.symmetric(
-                                            vertical: 12, horizontal: 12),
-                                        child: Row(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                          children: <Widget>[
-                                            RichText(
-                                                textAlign: TextAlign.center,
-                                                text: TextSpan(
-                                                  children: <TextSpan>[
-                                                    TextSpan(
-                                                      text: "Planet\n",
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .subtitle1
-                                                          .copyWith(
-                                                          color: Colors.white,
-                                                          fontSize: sizeW * .025),
-                                                    ),
-                                                    TextSpan(
-                                                      text: pessoa.planeta.nome,
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .subtitle1
-                                                          .copyWith(
-                                                        color: Colors.white,
-                                                        fontSize: 16,
-                                                      ),
-                                                    )
-                                                  ],
-                                                )),
-                                            SizedBox(width: 10),
-                                            RichText(
-                                                textAlign: TextAlign.center,
-                                                text: TextSpan(
-                                                  children: <TextSpan>[
-                                                    TextSpan(
-                                                      text: "Height\n",
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .subtitle1
-                                                          .copyWith(
-                                                          color: Colors.white,
-                                                          fontSize: sizeW * .025),
-                                                    ),
-                                                    TextSpan(
-                                                      text: pessoa.altura,
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .subtitle1
-                                                          .copyWith(
-                                                        color: Colors.white,
-                                                        fontSize: 16,
-                                                      ),
-                                                    )
-                                                  ],
-                                                )),
-                                            SizedBox(width: 10),
-                                            RichText(
-                                                textAlign: TextAlign.center,
-                                                text: TextSpan(
-                                                  children: <TextSpan>[
-                                                    TextSpan(
-                                                      text: "Mass\n",
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .subtitle1
-                                                          .copyWith(
-                                                          color: Colors.white,
-                                                          fontSize: sizeW * .025),
-                                                    ),
-                                                    TextSpan(
-                                                      text: pessoa.peso,
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .subtitle1
-                                                          .copyWith(
-                                                        color: Colors.white,
-                                                        fontSize: 16,
-                                                      ),
-                                                    )
-                                                  ],
-                                                )),
-                                            SizedBox(width: 10),
-                                            RichText(
-                                                textAlign: TextAlign.center,
-                                                text: TextSpan(
-                                                  children: <TextSpan>[
-                                                    TextSpan(
-                                                      text: "Skin\n",
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .subtitle1
-                                                          .copyWith(
-                                                          color: Colors.white,
-                                                          fontSize: sizeW * .025),
-                                                    ),
-                                                    TextSpan(
-                                                      text: pessoa.corPele,
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .subtitle1
-                                                          .copyWith(
-                                                        color: Colors.white,
-                                                        fontSize: 16,
-                                                      ),
-                                                    )
-                                                  ],
-                                                )),
-                                            SizedBox(width: 10),
-                                            RichText(
-                                                textAlign: TextAlign.center,
-                                                text: TextSpan(
-                                                  children: <TextSpan>[
-                                                    TextSpan(
-                                                      text: "Hair\n",
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .subtitle1
-                                                          .copyWith(
-                                                          color: Colors.white,
-                                                          fontSize: sizeW * .025),
-                                                    ),
-                                                    TextSpan(
-                                                      text: pessoa.corCabelo,
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .subtitle1
-                                                          .copyWith(
-                                                        color: Colors.white,
-                                                        fontSize: 16,
-                                                      ),
-                                                    ),
-                                                  ],
-                                                )),
-                                            SizedBox(width: 10),
-                                            RichText(
-                                                textAlign: TextAlign.center,
-                                                text: TextSpan(
-                                                  children: <TextSpan>[
-                                                    TextSpan(
-                                                      text: "Eye\n",
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .subtitle1
-                                                          .copyWith(
-                                                          color: Colors.white,
-                                                          fontSize: sizeW * .025),
-                                                    ),
-                                                    TextSpan(
-                                                      text: pessoa.corOlho,
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .subtitle1
-                                                          .copyWith(
-                                                        color: Colors.white,
-                                                        fontSize: 16,
-                                                      ),
-                                                    )
-                                                  ],
-                                                )),
+                        child:SingleChildScrollView(child: Card(
+                          color: Colors.white.withOpacity(.1),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 12, horizontal: 12),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    RichText(
+                                        textAlign: TextAlign.center,
+                                        text: TextSpan(
+                                          children: <TextSpan>[
+                                            TextSpan(
+                                              text: "Planet\n",
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .subtitle1
+                                                  .copyWith(
+                                                  color: Colors.white,
+                                                  fontSize: sizeW * .025),
+                                            ),
+                                            TextSpan(
+                                              text: pessoa.planeta.nome,
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .subtitle1
+                                                  .copyWith(
+                                                color: Colors.white,
+                                                fontSize: 16,
+                                              ),
+                                            )
                                           ],
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.symmetric(
-                                            vertical: 16, horizontal: 16),
-                                        child: Container(
-                                          width: sizeW,
-                                          child: ListResult(pessoa.filmes, "Films"),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.symmetric(vertical: 16),
-                                        child: Container(
-                                          alignment: Alignment.centerLeft,
-                                          width: sizeW,
-                                          child: ListResult(pessoa.naves, "Starships"),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.symmetric(
-                                            vertical: 16, horizontal: 16),
-                                        child: Container(
-                                          width: sizeW,
-                                          child:
-                                          ListResult(pessoa.veiculos, "Vehicles"),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ),)),
-                          ],
-                        ),
+                                        )),
+                                    SizedBox(width: 10),
+                                    RichText(
+                                        textAlign: TextAlign.center,
+                                        text: TextSpan(
+                                          children: <TextSpan>[
+                                            TextSpan(
+                                              text: "Height\n",
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .subtitle1
+                                                  .copyWith(
+                                                  color: Colors.white,
+                                                  fontSize: sizeW * .025),
+                                            ),
+                                            TextSpan(
+                                              text: pessoa.altura,
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .subtitle1
+                                                  .copyWith(
+                                                color: Colors.white,
+                                                fontSize: 16,
+                                              ),
+                                            )
+                                          ],
+                                        )),
+                                    SizedBox(width: 10),
+                                    RichText(
+                                        textAlign: TextAlign.center,
+                                        text: TextSpan(
+                                          children: <TextSpan>[
+                                            TextSpan(
+                                              text: "Mass\n",
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .subtitle1
+                                                  .copyWith(
+                                                  color: Colors.white,
+                                                  fontSize: sizeW * .025),
+                                            ),
+                                            TextSpan(
+                                              text: pessoa.peso,
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .subtitle1
+                                                  .copyWith(
+                                                color: Colors.white,
+                                                fontSize: 16,
+                                              ),
+                                            )
+                                          ],
+                                        )),
+                                    SizedBox(width: 10),
+                                    RichText(
+                                        textAlign: TextAlign.center,
+                                        text: TextSpan(
+                                          children: <TextSpan>[
+                                            TextSpan(
+                                              text: "Skin\n",
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .subtitle1
+                                                  .copyWith(
+                                                  color: Colors.white,
+                                                  fontSize: sizeW * .025),
+                                            ),
+                                            TextSpan(
+                                              text: pessoa.corPele,
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .subtitle1
+                                                  .copyWith(
+                                                color: Colors.white,
+                                                fontSize: 16,
+                                              ),
+                                            )
+                                          ],
+                                        )),
+                                    SizedBox(width: 10),
+                                    RichText(
+                                        textAlign: TextAlign.center,
+                                        text: TextSpan(
+                                          children: <TextSpan>[
+                                            TextSpan(
+                                              text: "Hair\n",
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .subtitle1
+                                                  .copyWith(
+                                                  color: Colors.white,
+                                                  fontSize: sizeW * .025),
+                                            ),
+                                            TextSpan(
+                                              text: pessoa.corCabelo,
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .subtitle1
+                                                  .copyWith(
+                                                color: Colors.white,
+                                                fontSize: 16,
+                                              ),
+                                            ),
+                                          ],
+                                        )),
+                                    SizedBox(width: 10),
+                                    RichText(
+                                        textAlign: TextAlign.center,
+                                        text: TextSpan(
+                                          children: <TextSpan>[
+                                            TextSpan(
+                                              text: "Eye\n",
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .subtitle1
+                                                  .copyWith(
+                                                  color: Colors.white,
+                                                  fontSize: sizeW * .025),
+                                            ),
+                                            TextSpan(
+                                              text: pessoa.corOlho,
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .subtitle1
+                                                  .copyWith(
+                                                color: Colors.white,
+                                                fontSize: 16,
+                                              ),
+                                            )
+                                          ],
+                                        )),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 16, horizontal: 16),
+                                child: Container(
+                                  width: sizeW,
+                                  child: ListResult(pessoa.filmes, "Films"),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(vertical: 16),
+                                child: Container(
+                                  alignment: Alignment.centerLeft,
+                                  width: sizeW,
+                                  child: ListResult(pessoa.naves, "Starships"),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 16, horizontal: 16),
+                                child: Container(
+                                  width: sizeW,
+                                  child:
+                                  ListResult(pessoa.veiculos, "Vehicles"),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),)
+//                        Stack(
+//                          children: <Widget>[
+////                            Card(
+////                              elevation: 3,
+////                              color: Colors.white.withOpacity(0.01),
+////                              child: Column(
+////                                children: <Widget>[
+////                                  MyHero(
+////                                    photo: pessoa.image,
+////                                    onTap: () {
+////                                      Navigator.of(context).pop();
+////                                    },
+////                                  ),
+////                                ],
+////                              ),
+////                            ),
+//                            Positioned(
+//                                top: sizeH * .0003,
+//                                child: ),
+//                          ],
+//                        ),
                       ),
                     ],
                   ),

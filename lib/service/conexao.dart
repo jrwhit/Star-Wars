@@ -10,9 +10,7 @@ class ConexaoApi {
 
   Future carregarImages<String>(String texto)async{
     try{
-      response = await dio.get("https://www.googleapis.com/customsearch/"
-          "v1?key=AIzaSyBdNXOihcWDODmOwDVjlvJZJ81kvZBucvA&cx=85b23a522ef724a5d&q="
-          "$texto&searchType=image&fileType=png");
+      response = await dio.get("https://www.googleapis.com/customsearch/v1/siterestrict?key=AIzaSyBdNXOihcWDODmOwDVjlvJZJ81kvZBucvA&cx=85b23a522ef724a5d&q=$texto&searchType=image&siteSearch=https://www.starwars.com/databank");
       return response.data["items"][0]["link"];
     }catch(e){
       print(e);
