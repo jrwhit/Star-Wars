@@ -14,7 +14,7 @@ Episódio I
 Uma Nova Oportunidade
 
 
-É um período de provação. Partindo de uma base central da BitX, e-mails são lançados com desafios, em um julgamento final com objetivo de conquistar um novo nome para ocupar sua núcleo.
+É um período de provação. Partindo de uma base central da BitX, e-mails são lançados com desafios, em um julgamento final com objetivo de conquistar um novo nome para ocupar seu núcleo.
 
 Durante longas noites, programadores seguem os planos descritos de forma decisiva para alcançar seu objetivo, a VAGA, uma oportunidade especial com poder suficiente para mudar uma vida inteira.
 
