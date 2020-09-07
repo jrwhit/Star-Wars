@@ -5,16 +5,16 @@ import 'package:star_wars/model/Pessoa.dart';
 import 'package:star_wars/widget/list_detalhes.dart';
 import 'package:star_wars/widget/my_hero.dart';
 
-class PageHero extends StatefulWidget {
-  PageHero(this.pessoa);
+class PeoplePage extends StatefulWidget {
+  PeoplePage(this.pessoa);
   final Pessoa pessoa;
 
   @override
-  _PageHeroState createState() => _PageHeroState(pessoa);
+  _PeoplePageState createState() => _PeoplePageState(pessoa);
 }
 
-class _PageHeroState extends State<PageHero> {
-  _PageHeroState(this.pessoa);
+class _PeoplePageState extends State<PeoplePage> {
+  _PeoplePageState(this.pessoa);
   final Pessoa pessoa;
   @override
   void initState() {

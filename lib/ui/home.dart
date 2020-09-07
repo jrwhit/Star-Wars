@@ -114,7 +114,7 @@ class _HomeState extends State<Home> {
               Navigator.of(context)
                   .push(MaterialPageRoute(
                   builder: (context) =>
-                      PageHero(pessoa)));
+                      PeoplePage(pessoa)));
             });
           }
         }).catchError((e) => print(e));

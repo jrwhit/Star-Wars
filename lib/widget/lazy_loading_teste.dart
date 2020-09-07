@@ -267,7 +267,7 @@ class _LazyLoadingState extends State<LazyLoading> {
                           .whenComplete(() {
                         Navigator.of(context).pop();
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => PageHero(pessoa)));
+                            builder: (context) => PeoplePage(pessoa)));
                       });
                     });
                   break;

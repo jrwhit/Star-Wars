@@ -182,7 +182,7 @@ class _CarouselState extends State<Carousel> {
                                   .whenComplete(() {
                                 Navigator.of(context).pop();
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => PageHero(pessoa)));
+                                    builder: (context) => PeoplePage(pessoa)));
                               });
                             });
                           break;

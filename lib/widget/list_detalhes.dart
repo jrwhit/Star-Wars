@@ -115,7 +115,7 @@ class _ListResultState extends State<ListResult> with AutomaticKeepAliveClientMi
                                     .whenComplete(() {
                                   Navigator.of(context).pop();
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => PageHero(pessoa)));
+                                      builder: (context) => PeoplePage(pessoa)));
                                 });
                               });
                             break;

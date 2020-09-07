@@ -19,6 +19,7 @@ dependencies:
   flutter_mobx: ^1.1.0
   dio: ^3.0.9
   lazy_load_scrollview: ^1.1.0
+  assets_audio_player: 2.0.9
 
 dev_dependencies:
   flutter_test:
@@ -42,6 +43,8 @@ flutter:
     - assets/images/veiculo.jpg
     - assets/images/people.jpg
     - assets/images/home.jpg
+    - assets/images/logo.png
+    - assets/audios/
 
   # example:
   # fonts:
