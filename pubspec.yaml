@@ -37,6 +37,11 @@ flutter:
     - assets/images/ceu.png
     - assets/images/r2d2.png
     - assets/images/loading.gif
+    - assets/images/film.jpg
+    - assets/images/specie.jpg
+    - assets/images/veiculo.jpg
+    - assets/images/people.jpg
+    - assets/images/home.jpg
 
   # example:
   # fonts:

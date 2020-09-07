@@ -16,7 +16,7 @@ class VeiculoPage extends StatelessWidget {
                 color: colorFont, fontSize: 16.0, fontWeight: FontWeight.w500),
             children: [
               TextSpan(
-                text: text,
+                text: text,style: TextStyle(color: Colors.yellowAccent)
               ),
               TextSpan(
                 text: text2,
@@ -34,14 +34,15 @@ class VeiculoPage extends StatelessWidget {
         SafeArea(
             child: Container(
               decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage("assets/images/ceu.png"))),
+                  image: DecorationImage(image:
+                  AssetImage("assets/images/veiculo.jpg"), fit: BoxFit.fill)),
               child: Scaffold(
-                backgroundColor: Colors.white.withOpacity(0.01),
+                backgroundColor: Colors.black.withOpacity(0.01),
                 body: SingleChildScrollView(
                   child: Column(
                     children: <Widget>[
                       Card(
-                        color: Colors.white.withOpacity(0.1),
+                        color: Colors.black.withOpacity(0.1),
                         elevation: 0,
                         child: Row(
                           children: <Widget>[
@@ -71,7 +72,7 @@ class VeiculoPage extends StatelessWidget {
                                 height: MediaQuery.of(context).size.height * 0.3,
                                 width: MediaQuery.of(context).size.width,
                                 image: NetworkImage(
-                                  "https://vignette.wikia.nocookie.net/starwars/images/2/27/Rebel_snowspeeder_SWL.png/revision/latest?cb=20190515060930",
+                                  veiculo.image,
                                 )),
                             Text(
                               veiculo.nome,
@@ -89,28 +90,28 @@ class VeiculoPage extends StatelessWidget {
                         child: Container(
                           width: sizeW,
                           padding: EdgeInsets.symmetric(vertical: 18, horizontal: 8),
-                          color: Colors.white.withOpacity(0.1),
+                          color: Colors.black.withOpacity(0.3),
                           child: Column(
                             children: <Widget>[
                               Table(
-                                columnWidths: {2: FractionColumnWidth(.3)},
+                                columnWidths: {1: FractionColumnWidth(.5)},
                                 children: [
                                   TableRow(children: [
-                                    paragraph(themeText, "Cost: ", veiculo.custo,
+                                    paragraph(themeText, "Cost: \n", veiculo.custo,
                                         Colors.white),
-                                    paragraph(themeText, "Model: ", veiculo.modelo,
+                                    paragraph(themeText, "Model: \n", veiculo.modelo,
                                         Colors.white),
                                   ]),
                                   TableRow(children: [
-                                    paragraph(themeText, "Passengers: ",
+                                    paragraph(themeText, "Passengers: \n",
                                         veiculo.passageiros, Colors.white),
-                                    paragraph(themeText, "Consumables: ",
+                                    paragraph(themeText, "Consumables: \n",
                                         veiculo.consumables, Colors.white),
                                   ]),
                                   TableRow(children: [
-                                    paragraph(themeText, "Crew: ", veiculo.crew,
+                                    paragraph(themeText, "Crew: \n", veiculo.crew,
                                         Colors.white),
-                                    paragraph(themeText, "Speed: ", veiculo.speed,
+                                    paragraph(themeText, "Speed: \n", veiculo.speed,
                                         Colors.white),
                                   ]),
                                 ],

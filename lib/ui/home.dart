@@ -130,7 +130,7 @@ class _HomeState extends State<Home> {
         child: Container(
           decoration: BoxDecoration(
               image: DecorationImage(
-                  image: NetworkImage("https://themobilewallpaper.com/uploads/blog_images/Devices-iPhone-5-mobile-tablet-HD-Wallpaper-1593852393.jpg"),
+                  image: AssetImage("assets/images/home.jpg"),
                   fit: BoxFit.fill)
           ),
           child: SafeArea(

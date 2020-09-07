@@ -2,7 +2,7 @@ import 'package:star_wars/model/film.dart';
 
 class Nave{
   String nome, modelo, manufatura, custo, tamanho, velocidadeMax, eTecnica,
-  passageiros, capacidade, consumo, hyper, mglt, classe;
+  passageiros, capacidade, consumo, hyper, mglt, classe, image;
   List<String> listFilm;
 
   Nave({this.listFilm, this.nome, this.capacidade, this.classe, this.consumo,

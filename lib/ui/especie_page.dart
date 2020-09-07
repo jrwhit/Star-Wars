@@ -16,7 +16,7 @@ class SpeciePage extends StatelessWidget {
                 color: colorFont, fontSize: 16.0, fontWeight: FontWeight.w500),
             children: [
               TextSpan(
-                text: text,
+                  text: text,style: TextStyle(color: Colors.yellowAccent)
               ),
               TextSpan(
                 text: text2,
@@ -34,8 +34,8 @@ class SpeciePage extends StatelessWidget {
         SafeArea(
             child: Container(
               decoration: BoxDecoration(
-                  image: DecorationImage(image: NetworkImage(
-                      "https://lh3.googleusercontent.com/proxy/PE7rPUde830bcSsD5lXtuSnD7-ule658aZ-eaaDZ9lARADLcw4OYNrgKRX7dNG8IdsSYZ8OLOSDiOBmgmLzQX-SGEhJpsvkP6XIuuwKap-o"),
+                  image: DecorationImage(image: AssetImage(
+                      "assets/images/specie.jpg"),
                       fit: BoxFit.fill)),
               child: Scaffold(
                 backgroundColor: Colors.black.withOpacity(0.3),
@@ -73,7 +73,7 @@ class SpeciePage extends StatelessWidget {
                                 height: MediaQuery.of(context).size.height * 0.3,
                                 width: MediaQuery.of(context).size.width,
                                 image: NetworkImage(
-                                  "https://vignette.wikia.nocookie.net/starwars/images/c/cd/Battle_Droid.png/revision/latest?cb=20160910192832",
+                                  especie.image,
                                 )),
                             Text(
                               especie.nome,
@@ -98,27 +98,27 @@ class SpeciePage extends StatelessWidget {
                                 columnWidths: {2: FractionColumnWidth(.3)},
                                 children: [
                                   TableRow(children: [
-                                    paragraph(themeText, "Name: ", especie.nome,
+                                    paragraph(themeText, "Name: \n", especie.nome,
                                         Colors.white),
-                                    paragraph(themeText, "Average Height: ", especie.altMedia,
+                                    paragraph(themeText, "Average Height: \n", especie.altMedia,
                                         Colors.white),
                                   ]),
                                   TableRow(children: [
-                                    paragraph(themeText, "Classification: ",
+                                    paragraph(themeText, "Classification: \n",
                                         especie.classificacao, Colors.white),
-                                    paragraph(themeText, "designacao: ",
+                                    paragraph(themeText, "designacao: \n",
                                         especie.designacao, Colors.white),
                                   ]),
                                   TableRow(children: [
-                                    paragraph(themeText, "Hair Colors: ", especie.corC,
+                                    paragraph(themeText, "Hair Colors: \n", especie.corC,
                                         Colors.white),
-                                    paragraph(themeText, "skin Colors: ", especie.corP,
+                                    paragraph(themeText, "skin Colors: \n", especie.corP,
                                         Colors.white),
                                   ]),
                                   TableRow(children: [
-                                    paragraph(themeText, "Language: ", especie.linguagem,
+                                    paragraph(themeText, "Language: \n", especie.linguagem,
                                         Colors.white),
-                                    paragraph(themeText, "Homeworld: ",
+                                    paragraph(themeText, "Homeworld: \n",
                                         especie.mundo != null ? especie.mundo.nome : "N/A",
                                         Colors.white),
                                   ]),

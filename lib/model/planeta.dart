@@ -3,7 +3,7 @@ import 'package:star_wars/model/film.dart';
 
 class Planeta{
   String nome, rotPeriodo, orbPeriodo, diametro, clima, gravidade, terreno,
-  agua, populacao;
+  agua, populacao, image;
   List<String> listPessoas;
   List<String> listFilmes;
 

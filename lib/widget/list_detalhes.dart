@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
@@ -124,6 +126,8 @@ class _ListResultState extends State<ListResult> with AutomaticKeepAliveClientMi
                                   .then((value) => nave = Nave().fromMap(value))
                                   .whenComplete(() {
                                 Navigator.of(context).pop();
+                                nave.image = "https://www.crazyhappyfuntime.com/swimg/starships/${_list[index].replaceAll(RegExp(r'[^0-9]'), "")}/"
+                                    "1.jpg";
                                 Navigator.of(context).push(MaterialPageRoute(
                                     builder: (context) => NavePage(nave)));
                               });
@@ -136,6 +140,8 @@ class _ListResultState extends State<ListResult> with AutomaticKeepAliveClientMi
                                       (value) => filme = Filme().fromMap(value))
                                   .whenComplete(() {
                                 Navigator.of(context).pop();
+                                filme.image = "https://www.crazyhappyfuntime.com/swimg/films/${_list[index].replaceAll(RegExp(r'[^0-9]'), "")}/"
+                                    "1.jpg";
                                 Navigator.of(context).push(MaterialPageRoute(
                                     builder: (context) => PageFilm(filme)));
                               });
@@ -148,6 +154,8 @@ class _ListResultState extends State<ListResult> with AutomaticKeepAliveClientMi
                               veiculo = Veiculo().fromMap(value))
                                   .whenComplete(() {
                                 Navigator.of(context).pop();
+                                veiculo.image = "https://www.crazyhappyfuntime.com/swimg/vehicles/${_list[index].replaceAll(RegExp(r'[^0-9]'), "")}/"
+                                    "1.jpg";
                                 Navigator.of(context).push(MaterialPageRoute(
                                     builder: (context) =>
                                         VeiculoPage(veiculo)));
@@ -161,6 +169,8 @@ class _ListResultState extends State<ListResult> with AutomaticKeepAliveClientMi
                               planeta = Planeta().fromMap(value))
                                   .whenComplete(() {
                                 Navigator.of(context).pop();
+                                planeta.image = "https://www.crazyhappyfuntime.com/swimg/planets/${_list[index].replaceAll(RegExp(r'[^0-9]'), "")}/"
+                                    "1.jpg";
                                 Navigator.of(context).push(MaterialPageRoute(
                                     builder: (context) => PlanetPage(planeta)));
                               });
@@ -176,6 +186,8 @@ class _ListResultState extends State<ListResult> with AutomaticKeepAliveClientMi
                                     Planeta().fromMap(planet))
                                     .whenComplete(() {
                                   Navigator.of(context).pop();
+                                  especie.image = "https://www.crazyhappyfuntime.com/swimg/species/${_list[index].replaceAll(RegExp(r'[^0-9]'), "")}/"
+                                      "1.jpg";
                                   Navigator.of(context).push(MaterialPageRoute(
                                       builder: (context) =>
                                           SpeciePage(especie)));
@@ -230,27 +242,39 @@ class _ListResultState extends State<ListResult> with AutomaticKeepAliveClientMi
       case "Pilots":
         result = Result(map["name"], map["birth_year"],
             map["gender"].toString(), link, title.toString().toLowerCase());
+        result.image = "https://starwars-visualguide.com/assets/img/characters/"
+            "${result.link.replaceAll(RegExp(r'[^0-9]'), "")}.jpg";
         break;
       case "Films":
         result = Result(map["title"], map["director"],
             map["episode_id"].toString(), link, title.toString().toLowerCase());
+        result.image = "https://starwars-visualguide.com/assets/img/films/"
+            "${result.link.replaceAll(RegExp(r'[^0-9]'), "")}.jpg";
         break;
       case "Starships":
         result = Result(map["name"], map["starship_class"], map["model"], link,
             title.toString().toLowerCase());
         result.nave = Nave().fromMap(map);
+        result.image = "https://www.crazyhappyfuntime.com/swimg/starships/${result.link.replaceAll(RegExp(r'[^0-9]'), "")}/"
+            "1.jpg";
         break;
       case "Vehicles":
         result = Result(map["name"], map["vehicle_class"], map["model"], link,
             title.toString().toLowerCase());
+        result.image = "https://www.crazyhappyfuntime.com/swimg/vehicles/${result.link.replaceAll(RegExp(r'[^0-9]'), "")}/"
+            "1.jpg";
         break;
       case "Planets":
         result = Result(map["name"], map["climate"], map["terrain"], link,
             title.toString().toLowerCase());
+        result.image = "https://www.crazyhappyfuntime.com/swimg/planets/${result.link.replaceAll(RegExp(r'[^0-9]'), "")}/"
+            "1.jpg";
         break;
       case "Species":
         result = Result(map["name"], map["language"], map["classification"],
             link, title.toString().toLowerCase());
+        result.image = "https://www.crazyhappyfuntime.com/swimg/species/${result.link.replaceAll(RegExp(r'[^0-9]'), "")}/"
+            "1.jpg";
         break;
     }
     return Container(
@@ -264,7 +288,7 @@ class _ListResultState extends State<ListResult> with AutomaticKeepAliveClientMi
               width: MediaQuery.of(context).size.width * 0.2,
               height: MediaQuery.of(context).size.height * 0.3,
               child: Image.network(
-                "https://img2.wikia.nocookie.net/__cb20100915165213/starwars/images/8/84/QuiGonJinn-SWSB.png",
+                result.image,
                 fit: BoxFit.fill,
               ),
             ),
@@ -298,7 +322,7 @@ class _ListResultState extends State<ListResult> with AutomaticKeepAliveClientMi
 }
 
 class Result {
-  String titulo, subtitulo, trailing, link, type;
+  String titulo, subtitulo, trailing, link, type, image;
   Nave nave;
   Filme film;
   Veiculo veiculo;

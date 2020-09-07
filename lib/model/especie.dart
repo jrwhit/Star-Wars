@@ -4,7 +4,7 @@ import 'package:star_wars/model/planeta.dart';
 
 class Especie{
   String nome, classificacao, designacao,
-      altMedia, corP, corC, corO, vidaM, linguagem;
+      altMedia, corP, corC, corO, vidaM, linguagem, image;
   Planeta mundo;
   List<String> listPessoas;
   List<String> listFilm;

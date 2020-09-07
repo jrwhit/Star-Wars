@@ -1,6 +1,6 @@
 class Veiculo{
   String nome, modelo, manunfatura, custo, tamanho, speed, crew, passageiros,
-  capacidade, consumables, classe;
+  capacidade, consumables, classe, image;
   List<String> pilotos;
   List<String> filmes;
 

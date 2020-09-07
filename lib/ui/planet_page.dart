@@ -16,7 +16,7 @@ class PlanetPage extends StatelessWidget {
                 color: colorFont, fontSize: 16.0, fontWeight: FontWeight.w500),
             children: [
               TextSpan(
-                text: text,
+                  text: text,style: TextStyle(color: Colors.yellowAccent)
               ),
               TextSpan(
                 text: text2,
@@ -71,7 +71,7 @@ class PlanetPage extends StatelessWidget {
                                 height: MediaQuery.of(context).size.height * 0.3,
                                 width: MediaQuery.of(context).size.width,
                                 image: NetworkImage(
-                                  "https://img.swcombine.com//galaxy/planets/custom/large/130.gif",
+                                  planeta.image,
                                 )),
                             Text(
                               planeta.nome,
@@ -93,30 +93,30 @@ class PlanetPage extends StatelessWidget {
                           child: Column(
                             children: <Widget>[
                               Table(
-                                columnWidths: {2: FractionColumnWidth(.3)},
+                                columnWidths: {1: FractionColumnWidth(.5)},
                                 children: [
                                   TableRow(children: [
-                                    paragraph(themeText, "Name: ", planeta.nome,
+                                    paragraph(themeText, "Name: \n", planeta.nome,
                                         Colors.white),
-                                    paragraph(themeText, "Rotation: ", planeta.rotPeriodo,
+                                    paragraph(themeText, "Rotation: \n", planeta.rotPeriodo,
                                         Colors.white),
                                   ]),
                                   TableRow(children: [
-                                    paragraph(themeText, "Orbital: ",
+                                    paragraph(themeText, "Orbital: \n",
                                         planeta.orbPeriodo, Colors.white),
-                                    paragraph(themeText, "Diameter: ",
+                                    paragraph(themeText, "Diameter: \n",
                                         planeta.diametro, Colors.white),
                                   ]),
                                   TableRow(children: [
-                                    paragraph(themeText, "Climate: ", planeta.clima,
+                                    paragraph(themeText, "Climate: \n", planeta.clima,
                                         Colors.white),
-                                    paragraph(themeText, "Gravity: ", planeta.gravidade,
+                                    paragraph(themeText, "Gravity: \n", planeta.gravidade,
                                         Colors.white),
                                   ]),
                                   TableRow(children: [
-                                    paragraph(themeText, "Terrain: ", planeta.terreno,
+                                    paragraph(themeText, "Terrain: \n", planeta.terreno,
                                         Colors.white),
-                                    paragraph(themeText, "Population: ", planeta.populacao,
+                                    paragraph(themeText, "Population: \n", planeta.populacao,
                                         Colors.white),
                                   ]),
                                 ],

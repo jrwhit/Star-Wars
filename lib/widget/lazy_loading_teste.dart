@@ -278,6 +278,8 @@ class _LazyLoadingState extends State<LazyLoading> {
                         .then((value) => nave = Nave().fromMap(value))
                         .whenComplete(() {
                       Navigator.of(context).pop();
+                      nave.image = "https://www.crazyhappyfuntime.com/swimg/starships/${listResult[index]["url"].replaceAll(RegExp(r'[^0-9]'), "")}/"
+                          "1.jpg";
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => NavePage(nave)));
                     });
@@ -289,6 +291,8 @@ class _LazyLoadingState extends State<LazyLoading> {
                         .then((value) => filme = Filme().fromMap(value))
                         .whenComplete(() {
                       Navigator.of(context).pop();
+                      filme.image = "https://www.crazyhappyfuntime.com/swimg/films/${listResult[index]["url"].replaceAll(RegExp(r'[^0-9]'), "")}/"
+                          "1.jpg";
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => PageFilm(filme)));
                     });
@@ -300,6 +304,8 @@ class _LazyLoadingState extends State<LazyLoading> {
                         .then((value) => veiculo = Veiculo().fromMap(value))
                         .whenComplete(() {
                       Navigator.of(context).pop();
+                      veiculo.image = "https://www.crazyhappyfuntime.com/swimg/vehicles/${listResult[index]["url"].replaceAll(RegExp(r'[^0-9]'), "")}/"
+                          "1.jpg";
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => VeiculoPage(veiculo)));
                     });

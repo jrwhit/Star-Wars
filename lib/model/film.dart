@@ -7,7 +7,7 @@ import 'especie.dart';
 import 'nave.dart';
 
 class Filme{
-  String dataLancamento, producao, diretor, abertura, epId, titulo;
+  String dataLancamento, producao, diretor, abertura, epId, titulo, image;
   List<String> listEspecie;
   List<String> listVeiculo;
   List<String> listPessoa;

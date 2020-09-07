@@ -27,7 +27,7 @@ class _PageHeroState extends State<PageHero> {
     var sizeH = MediaQuery.of(context).size.height;
     return Container(
       decoration: BoxDecoration(
-          image: DecorationImage(image: NetworkImage("https://mocah.org/uploads/posts/326361-Star-Wars-TIE-Fighter-Sci-Fi-Fantasy-Space-Planet-4K-iphone-wallpaper.jpg"), fit: BoxFit.fill)
+          image: DecorationImage(image: AssetImage("assets/images/people.jpg"), fit: BoxFit.fill)
       ),
       child: Stack(
         children: <Widget>[

@@ -30,8 +30,8 @@ class PageFilm extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: NetworkImage(
-                          "https://wallpapers.moviemania.io/phone/movie/181812/877f43/star-wars-the-rise-of-skywalker-phone-wallpaper.jpg?w=1536&h=2732"))),
+                      image: AssetImage(
+                          "assets/images/film.jpg"))),
               child: Scaffold(
                 backgroundColor: Colors.white.withOpacity(0.01),
                 body: SingleChildScrollView(
@@ -72,7 +72,7 @@ class PageFilm extends StatelessWidget {
                                 width: sizeW,
                                 height: sizeH * 0.2,
                                 child: Image.network(
-                                  "https://www.syfy.com/sites/syfy/files/styles/1200x680_hero/public/2017/12/star_wars_header_0.jpg",
+                                  film.image,
                                   fit: BoxFit.cover,
                                   filterQuality: FilterQuality.high,
                                 ),
@@ -84,7 +84,7 @@ class PageFilm extends StatelessWidget {
                                 child: Row(
                                   children: <Widget>[
                                     Image.network(
-                                      "https://upload.wikimedia.org/wikipedia/en/8/87/StarWarsMoviePoster1977.jpg",
+                                      film.image,
                                       fit: BoxFit.cover,
                                       filterQuality: FilterQuality.high,
                                     ),

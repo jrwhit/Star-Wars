@@ -16,7 +16,7 @@ class NavePage extends StatelessWidget {
                 color: colorFont, fontSize: 16.0, fontWeight: FontWeight.w500),
             children: [
               TextSpan(
-                text: text,
+                  text: text,style: TextStyle(color: Colors.yellowAccent)
               ),
               TextSpan(
                 text: text2,
@@ -71,7 +71,7 @@ class NavePage extends StatelessWidget {
                                 height: MediaQuery.of(context).size.height * 0.3,
                                 width: MediaQuery.of(context).size.width,
                                 image: NetworkImage(
-                                  "https://vignette.wikia.nocookie.net/starwars/images/3/38/Corvette_negvv.png/revision/latest?cb=20170410043658",
+                                  nave.image
                                 )),
                             Text(
                               nave.nome,
@@ -93,42 +93,42 @@ class NavePage extends StatelessWidget {
                           child: Column(
                             children: <Widget>[
                               Table(
-                                columnWidths: {2: FractionColumnWidth(.3)},
+                                columnWidths: {1: FractionColumnWidth(.5)},
                                 children: [
                                   TableRow(children: [
-                                    paragraph(themeText, "Model: ", nave.modelo,
+                                    paragraph(themeText, "Model: \n", nave.modelo,
                                         Colors.white),
-                                    paragraph(themeText, "Class: ", nave.classe,
+                                    paragraph(themeText, "Class: \n", nave.classe,
                                         Colors.white),
                                   ]),
                                   TableRow(children: [
-                                    paragraph(themeText, "Cargo Capacity: ",
+                                    paragraph(themeText, "Cargo Capacity: \n",
                                         nave.capacidade, Colors.white),
-                                    paragraph(themeText, "Consumables: ",
+                                    paragraph(themeText, "Consumables: \n",
                                         nave.consumo, Colors.white),
                                   ]),
                                   TableRow(children: [
-                                    paragraph(themeText, "Cost: ", nave.custo,
+                                    paragraph(themeText, "Cost: \n", nave.custo,
                                         Colors.white),
-                                    paragraph(themeText, "Crew: ", nave.eTecnica,
-                                        Colors.white),
-                                  ]),
-                                  TableRow(children: [
-                                    paragraph(themeText, "Hyperdrive: ", nave.hyper,
-                                        Colors.white),
-                                    paragraph(themeText, "Manufacturer: ", nave.manufatura,
+                                    paragraph(themeText, "Crew: \n", nave.eTecnica,
                                         Colors.white),
                                   ]),
                                   TableRow(children: [
-                                    paragraph(themeText, "MGLT: ", nave.mglt,
+                                    paragraph(themeText, "Hyperdrive: \n", nave.hyper,
                                         Colors.white),
-                                    paragraph(themeText, "Passengers: ", nave.passageiros,
+                                    paragraph(themeText, "Manufacturer: \n", nave.manufatura,
                                         Colors.white),
                                   ]),
                                   TableRow(children: [
-                                    paragraph(themeText, "Length: ", nave.tamanho,
+                                    paragraph(themeText, "MGLT: \n", nave.mglt,
                                         Colors.white),
-                                    paragraph(themeText, "Max Speed: ", nave.velocidadeMax,
+                                    paragraph(themeText, "Passengers: \n", nave.passageiros,
+                                        Colors.white),
+                                  ]),
+                                  TableRow(children: [
+                                    paragraph(themeText, "Length: \n", nave.tamanho,
+                                        Colors.white),
+                                    paragraph(themeText, "Max Speed: \n", nave.velocidadeMax,
                                         Colors.white),
                                   ]),
                                 ],
