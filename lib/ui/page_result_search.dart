@@ -13,18 +13,20 @@ import 'package:star_wars/service/conexao.dart';
 import 'package:star_wars/ui/people_page.dart';
 
 class ResultSearch extends StatefulWidget {
-  ResultSearch(this.map);
+  ResultSearch(this.map, this.title);
   Map<String, dynamic> map;
+  String title;
 
   @override
-  _ResultSearchState createState() => _ResultSearchState(map);
+  _ResultSearchState createState() => _ResultSearchState(map, title);
 }
 
 class _ResultSearchState extends State<ResultSearch>
     with AutomaticKeepAliveClientMixin {
-  _ResultSearchState(this.map);
+  _ResultSearchState(this.map, this.title);
   Map<String, dynamic> map;
   Result result;
+  String title;
 
   int page = 1;
   ScrollController _sc = new ScrollController();
@@ -96,7 +98,7 @@ class _ResultSearchState extends State<ResultSearch>
         backgroundColor: Colors.black.withOpacity(0.01),
         appBar: AppBar(
           backgroundColor: Colors.white.withOpacity(0.1),
-          title: Text("Results"),
+          title: Text(title),
           centerTitle: true,
         ),
         body: SingleChildScrollView(

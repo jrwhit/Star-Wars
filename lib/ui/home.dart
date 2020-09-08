@@ -109,7 +109,7 @@ class _HomeState extends State<Home> {
             Navigator.of(context)
                 .push(MaterialPageRoute(
                 builder: (context) =>
-                    ResultSearch(value)));
+                    ResultSearch(value, query)));
           }else{
 
               pessoa = Pessoa().fromMap(value["results"][0]);
