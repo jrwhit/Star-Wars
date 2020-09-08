@@ -33,10 +33,7 @@ flutter:
 
   assets:
     - assets/images/lightsaber.png
-    - assets/images/quinavatar.png
-    - assets/images/quinRetrato.png
     - assets/images/ceu.png
-    - assets/images/r2d2.png
     - assets/images/loading.gif
     - assets/images/film.jpg
     - assets/images/specie.jpg

@@ -123,7 +123,8 @@ class _CarouselState extends State<Carousel> {
                       break;
                   }
 //                  var pessoa = Pessoa().fromMap(map['results'][index]);
-                  result.image = "assets/images/quinRetrato.png";
+                  result.image = "https://starwars-visualguide.com/assets/img/characters/"
+                      "${map['results'][index]["url"].replaceAll(RegExp(r'[^0-9]'), "")}.jpg";
                   return GestureDetector(
                     child: Container(
                       margin: EdgeInsets.symmetric(horizontal: 10),
@@ -174,7 +175,8 @@ class _CarouselState extends State<Carousel> {
                           ConexaoApi()
                             ..carregarLink(map['results'][index]["url"]).then((value) {
                               pessoa = Pessoa().fromMap(value);
-                              pessoa.image = "assets/images/quinRetrato.png";
+                              pessoa.image = "https://starwars-visualguide.com/assets/img/characters/"
+                                  "${map['results'][index]["url"].replaceAll(RegExp(r'[^0-9]'), "")}.jpg";
                               ConexaoApi()
                                   .carregarLink(value["homeworld"])
                                   .then((planet) => pessoa.planeta =

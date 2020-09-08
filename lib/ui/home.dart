@@ -6,6 +6,7 @@ import 'package:star_wars/model/Pessoa.dart';
 import 'package:star_wars/model/planeta.dart';
 import 'package:star_wars/service/conexao.dart';
 import 'package:star_wars/service/rotas.dart';
+import 'package:star_wars/ui/page_result_search.dart';
 import 'package:star_wars/ui/people_page.dart';
 import 'package:star_wars/util/constantes.dart';
 import 'package:star_wars/widget/carousel_home.dart';
@@ -103,19 +104,27 @@ class _HomeState extends State<Home> {
                     content: Text("Digite o nome de um personagem",
                     ))
             );
+          }else if(value["results"].length>1){
+            Navigator.of(context).pop();
+            Navigator.of(context)
+                .push(MaterialPageRoute(
+                builder: (context) =>
+                    ResultSearch(value)));
           }else{
-            pessoa = Pessoa().fromMap(value["results"][0]);
-            pessoa.image = "assets/images/quinRetrato.png";
-            ConexaoApi()
-                .carregarLink(value["results"][0]["homeworld"])
-                .then((planet) => pessoa.planeta = Planeta().fromMap(planet))
-                .whenComplete((){
-                  Navigator.of(context).pop();
-              Navigator.of(context)
-                  .push(MaterialPageRoute(
-                  builder: (context) =>
-                      PeoplePage(pessoa)));
-            });
+
+              pessoa = Pessoa().fromMap(value["results"][0]);
+              pessoa.image = "https://starwars-visualguide.com/assets/img/characters/"
+                  "${value['results'][0]['url'].replaceAll(RegExp(r'[^0-9]'), "")}.jpg";
+              ConexaoApi()
+                  .carregarLink(value["results"][0]["homeworld"])
+                  .then((planet) => pessoa.planeta = Planeta().fromMap(planet))
+                  .whenComplete((){
+                Navigator.of(context).pop();
+                Navigator.of(context)
+                    .push(MaterialPageRoute(
+                    builder: (context) =>
+                        PeoplePage(pessoa)));
+              });
           }
         }).catchError((e) => print(e));
     }
