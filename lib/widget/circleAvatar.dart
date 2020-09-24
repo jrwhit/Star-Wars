@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
-import 'package:star_wars/model/Pessoa.dart';
+import 'package:star_wars/model/pessoa.dart';
 
 // ignore: must_be_immutable
 class TileResult extends StatefulWidget {
   TileResult({Key key, @required this.pessoa}) : super(key: key);
-  final Pessoa pessoa;
+  final People pessoa;
   @override
   _TileResultState createState() => _TileResultState();
 }

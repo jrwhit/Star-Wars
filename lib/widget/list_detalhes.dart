@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:star_wars/model/Pessoa.dart';
+import 'package:star_wars/model/pessoa.dart';
 import 'package:star_wars/model/especie.dart';
 import 'package:star_wars/model/film.dart';
 import 'package:star_wars/model/nave.dart';
@@ -103,10 +103,10 @@ class _ListResultState extends State<ListResult> with AutomaticKeepAliveClientMi
                           case "characters":
                           case "peoples":
                           case "pilots":
-                            Pessoa pessoa;
+                            People pessoa;
                             ConexaoApi()
                               ..carregarLink(_list[index]).then((value) {
-                                pessoa = Pessoa().fromMap(value);
+                                pessoa = People().fromMap(value);
                                 pessoa.image = "assets/images/quinRetrato.png";
                                 ConexaoApi()
                                     .carregarLink(value["homeworld"])

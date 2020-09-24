@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:star_wars/ui/home.dart';
 import 'package:star_wars/ui/splash_screen.dart';
 
 void main() {

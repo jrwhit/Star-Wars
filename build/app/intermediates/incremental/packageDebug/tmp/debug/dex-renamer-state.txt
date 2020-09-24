@@ -1,0 +1,4 @@
+#Thu Sep 24 13:04:39 BRT 2020
+base.0=/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

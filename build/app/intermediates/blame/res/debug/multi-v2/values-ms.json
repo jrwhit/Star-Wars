@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ms/values-ms.xml",
+            "map": [
+                {
+                    "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/values-ms/values-ms.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,132,212,285,359,423,486,564,640,717,792,859,930,1010,1090,1157,1220,1290,1354,1420,1485,1563,1640,1693,1751,1799,1860,1924,1986,2047,2113,2176,2235,2301,2365,2431,2483,2545,2621,2697",
+                        "endColumns": "76,79,72,73,63,62,77,75,76,74,66,70,79,79,66,62,69,63,65,64,77,76,52,57,47,60,63,61,60,65,62,58,65,63,65,51,61,75,75,61",
+                        "endOffsets": "127,207,280,354,418,481,559,635,712,787,854,925,1005,1085,1152,1215,1285,1349,1415,1480,1558,1635,1688,1746,1794,1855,1919,1981,2042,2108,2171,2230,2296,2360,2426,2478,2540,2616,2692,2754"
+                    }
+                },
+                {
+                    "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/values-ms/values-ms.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "42",
+                        "startColumns": "4",
+                        "startOffsets": "2759",
+                        "endColumns": "100",
+                        "endOffsets": "2855"
+                    }
+                }
+            ]
+        }
+    ]
+}

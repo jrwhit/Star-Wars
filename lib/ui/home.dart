@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:star_wars/model/Pessoa.dart';
+import 'package:star_wars/model/pessoa.dart';
 import 'package:star_wars/model/planeta.dart';
 import 'package:star_wars/service/conexao.dart';
 import 'package:star_wars/service/rotas.dart';
@@ -93,7 +93,7 @@ class _HomeState extends State<Home> {
     if (query.toString().isEmpty) {
       Navigator.of(context).pop();
     } else if (query.toString().isNotEmpty) {
-      Pessoa pessoa;
+      People pessoa;
       ConexaoApi()
         ..carregarByNome(query)
             .then((value) async {
@@ -112,7 +112,7 @@ class _HomeState extends State<Home> {
                     ResultSearch(value, query)));
           }else{
 
-              pessoa = Pessoa().fromMap(value["results"][0]);
+              pessoa = People().fromMap(value["results"][0]);
               pessoa.image = "https://starwars-visualguide.com/assets/img/characters/"
                   "${value['results'][0]['url'].replaceAll(RegExp(r'[^0-9]'), "")}.jpg";
               ConexaoApi()

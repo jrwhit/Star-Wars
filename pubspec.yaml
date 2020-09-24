@@ -18,14 +18,18 @@ dependencies:
   mobx: ^1.1.1
   flutter_mobx: ^1.1.0
   dio: ^3.0.9
-  lazy_load_scrollview: ^1.1.0
   assets_audio_player: 2.0.9
+  provider:
+  rxdart:
+  json_annotation:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner: ^1.9.0
   mobx_codegen: ^1.0.3
+  json_serializable:
+  retrofit_generator:
 
 flutter:
 

@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:star_wars/model/Pessoa.dart';
+import 'package:star_wars/model/pessoa.dart';
 import 'package:star_wars/model/film.dart';
 import 'package:star_wars/model/nave.dart';
 import 'package:star_wars/model/planeta.dart';
@@ -255,10 +255,10 @@ class _LazyLoadingState extends State<LazyLoading> {
                       ));
               switch (result.type) {
                 case "peoples":
-                  Pessoa pessoa;
+                  People pessoa;
                   ConexaoApi()
                     ..carregarLink(listResult[index]["url"]).then((value) {
-                      pessoa = Pessoa().fromMap(value);
+                      pessoa = People().fromMap(value);
                       pessoa.image = result.image;
                       ConexaoApi()
                           .carregarLink(value["homeworld"])

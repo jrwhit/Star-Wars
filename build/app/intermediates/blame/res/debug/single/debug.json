@@ -1,0 +1,618 @@
+[
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_exo_icon_repeat_all.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-hdpi-v4/exo_icon_repeat_all.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_notification_template_big_media_custom.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/333a1c851fce95274a1c02b6cf2bfc8f/media-1.1.0/res/layout/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_exo_icon_shuffle_on.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-mdpi-v4/exo_icon_shuffle_on.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xxxhdpi-v4_exo_edit_mode_logo.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xxxhdpi-v4/exo_edit_mode_logo.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-anydpi-v21_exo_icon_shuffle_on.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-anydpi-v21/exo_icon_shuffle_on.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_notification_template_media.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/333a1c851fce95274a1c02b6cf2bfc8f/media-1.1.0/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_notification_action.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/layout/notification_action.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_exo_icon_fullscreen_enter.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-mdpi-v4/exo_icon_fullscreen_enter.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_exo_icon_previous.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-mdpi-v4/exo_icon_previous.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout-v21_notification_action_tombstone.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_exo_icon_pause.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-mdpi-v4/exo_icon_pause.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable_notification_bg_low.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_exo_icon_play.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xhdpi-v4/exo_icon_play.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-ldpi-v4_exo_icon_shuffle_on.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-ldpi-v4/exo_icon_shuffle_on.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable-hdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_exo_icon_shuffle_off.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-hdpi-v4/exo_icon_shuffle_off.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_exo_edit_mode_logo.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-hdpi-v4/exo_edit_mode_logo.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_notification_template_big_media_narrow_custom.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/333a1c851fce95274a1c02b6cf2bfc8f/media-1.1.0/res/layout/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_exo_icon_repeat_off.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-mdpi-v4/exo_icon_repeat_off.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xxhdpi-v4_exo_edit_mode_logo.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xxhdpi-v4/exo_edit_mode_logo.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xxhdpi-v4_exo_icon_shuffle_on.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xxhdpi-v4/exo_icon_shuffle_on.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-ldpi-v4_exo_icon_play.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-ldpi-v4/exo_icon_play.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xxhdpi-v4_exo_icon_rewind.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xxhdpi-v4/exo_icon_rewind.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_exo_icon_shuffle_on.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xhdpi-v4/exo_icon_shuffle_on.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_exo_simple_player_view.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/layout/exo_simple_player_view.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_exo_icon_shuffle_off.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xhdpi-v4/exo_icon_shuffle_off.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_exo_icon_circular_play.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-mdpi-v4/exo_icon_circular_play.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xxhdpi-v4_exo_icon_stop.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xxhdpi-v4/exo_icon_stop.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xxhdpi-v4_exo_icon_next.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xxhdpi-v4/exo_icon_next.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_notification_template_media_custom.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/333a1c851fce95274a1c02b6cf2bfc8f/media-1.1.0/res/layout/notification_template_media_custom.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_exo_icon_repeat_one.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-hdpi-v4/exo_icon_repeat_one.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_exo_icon_rewind.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xhdpi-v4/exo_icon_rewind.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-anydpi-v21_exo_edit_mode_logo.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-anydpi-v21/exo_edit_mode_logo.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_exo_icon_fastforward.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-mdpi-v4/exo_icon_fastforward.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-ldpi-v4_exo_icon_previous.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-ldpi-v4/exo_icon_previous.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_exo_edit_mode_logo.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-mdpi-v4/exo_edit_mode_logo.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_exo_icon_repeat_all.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-mdpi-v4/exo_icon_repeat_all.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_exo_icon_next.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-mdpi-v4/exo_icon_next.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable_notification_tile_bg.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_notification_template_big_media_narrow.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/333a1c851fce95274a1c02b6cf2bfc8f/media-1.1.0/res/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_exo_icon_fullscreen_exit.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-mdpi-v4/exo_icon_fullscreen_exit.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xxhdpi-v4_exo_icon_previous.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xxhdpi-v4/exo_icon_previous.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_notification_media_cancel_action.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/333a1c851fce95274a1c02b6cf2bfc8f/media-1.1.0/res/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xxhdpi-v4_exo_icon_pause.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xxhdpi-v4/exo_icon_pause.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_exo_icon_play.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-hdpi-v4/exo_icon_play.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-ldpi-v4_exo_icon_pause.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-ldpi-v4/exo_icon_pause.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_exo_player_control_view.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/layout/exo_player_control_view.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout-v21_notification_template_custom_big.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_notification_template_icon_group.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout-v21_notification_template_icon_group.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-anydpi-v21_exo_icon_repeat_all.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-anydpi-v21/exo_icon_repeat_all.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xxhdpi-v4_exo_icon_play.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xxhdpi-v4/exo_icon_play.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_exo_icon_circular_play.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xhdpi-v4/exo_icon_circular_play.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable_notification_bg.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-ldpi-v4_exo_icon_repeat_all.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-ldpi-v4/exo_icon_repeat_all.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-ldpi-v4_exo_icon_repeat_one.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-ldpi-v4/exo_icon_repeat_one.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_notification_template_part_chronometer.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-anydpi-v21_exo_icon_fastforward.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-anydpi-v21/exo_icon_fastforward.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_exo_playback_control_view.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/layout/exo_playback_control_view.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_exo_edit_mode_logo.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xhdpi-v4/exo_edit_mode_logo.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xxhdpi-v4_exo_icon_vr.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xxhdpi-v4/exo_icon_vr.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_custom_dialog.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_exo_icon_repeat_off.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xhdpi-v4/exo_icon_repeat_off.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_exo_icon_repeat_one.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xhdpi-v4/exo_icon_repeat_one.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-ldpi-v4_exo_icon_shuffle_off.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-ldpi-v4/exo_icon_shuffle_off.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_exo_list_divider.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/layout/exo_list_divider.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_exo_icon_play.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-mdpi-v4/exo_icon_play.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-anydpi-v21_exo_icon_repeat_off.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-anydpi-v21/exo_icon_repeat_off.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-ldpi-v4_exo_icon_repeat_off.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-ldpi-v4/exo_icon_repeat_off.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_exo_icon_next.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xhdpi-v4/exo_icon_next.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-anydpi-v21_exo_icon_next.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-anydpi-v21/exo_icon_next.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_exo_icon_fastforward.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xhdpi-v4/exo_icon_fastforward.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_exo_player_view.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/layout/exo_player_view.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_exo_icon_fullscreen_exit.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xhdpi-v4/exo_icon_fullscreen_exit.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_exo_icon_shuffle_off.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-mdpi-v4/exo_icon_shuffle_off.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-ldpi-v4_exo_icon_next.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-ldpi-v4/exo_icon_next.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xxhdpi-v4_exo_icon_circular_play.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xxhdpi-v4/exo_icon_circular_play.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-anydpi-v21_exo_icon_repeat_one.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-anydpi-v21/exo_icon_repeat_one.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_notification_template_big_media.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/333a1c851fce95274a1c02b6cf2bfc8f/media-1.1.0/res/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-anydpi-v21_exo_icon_play.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-anydpi-v21/exo_icon_play.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-ldpi-v4_exo_icon_fullscreen_exit.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-ldpi-v4/exo_icon_fullscreen_exit.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_exo_icon_next.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-hdpi-v4/exo_icon_next.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_exo_icon_pause.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-hdpi-v4/exo_icon_pause.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_exo_icon_repeat_one.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-mdpi-v4/exo_icon_repeat_one.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xxhdpi-v4_exo_icon_fullscreen_exit.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xxhdpi-v4/exo_icon_fullscreen_exit.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-anydpi-v21_exo_icon_fullscreen_enter.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-anydpi-v21/exo_icon_fullscreen_enter.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_exo_icon_repeat_all.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xhdpi-v4/exo_icon_repeat_all.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_exo_icon_fullscreen_enter.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-hdpi-v4/exo_icon_fullscreen_enter.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-ldpi-v4_exo_icon_vr.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-ldpi-v4/exo_icon_vr.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xxhdpi-v4_exo_icon_repeat_one.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xxhdpi-v4/exo_icon_repeat_one.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_exo_icon_previous.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-hdpi-v4/exo_icon_previous.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-ldpi-v4_exo_icon_fullscreen_enter.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-ldpi-v4/exo_icon_fullscreen_enter.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_exo_track_selection_dialog.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/layout/exo_track_selection_dialog.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_exo_icon_circular_play.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-hdpi-v4/exo_icon_circular_play.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-anydpi-v21_exo_icon_shuffle_off.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-anydpi-v21/exo_icon_shuffle_off.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_exo_icon_fullscreen_exit.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-hdpi-v4/exo_icon_fullscreen_exit.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-anydpi-v21_exo_icon_previous.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-anydpi-v21/exo_icon_previous.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-ldpi-v4_exo_icon_fastforward.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-ldpi-v4/exo_icon_fastforward.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_exo_icon_stop.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-mdpi-v4/exo_icon_stop.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_notification_template_lines_media.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/333a1c851fce95274a1c02b6cf2bfc8f/media-1.1.0/res/layout/notification_template_lines_media.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_exo_icon_stop.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-hdpi-v4/exo_icon_stop.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_exo_icon_pause.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xhdpi-v4/exo_icon_pause.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-anydpi-v21_exo_icon_fullscreen_exit.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-anydpi-v21/exo_icon_fullscreen_exit.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xxhdpi-v4_exo_icon_shuffle_off.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xxhdpi-v4/exo_icon_shuffle_off.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-ldpi-v4_exo_icon_circular_play.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-ldpi-v4/exo_icon_circular_play.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_exo_icon_rewind.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-hdpi-v4/exo_icon_rewind.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable-mdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_exo_icon_previous.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xhdpi-v4/exo_icon_previous.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-anydpi-v21_exo_icon_pause.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-anydpi-v21/exo_icon_pause.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_exo_icon_vr.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xhdpi-v4/exo_icon_vr.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xxhdpi-v4_exo_icon_fullscreen_enter.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xxhdpi-v4/exo_icon_fullscreen_enter.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_exo_icon_shuffle_on.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-hdpi-v4/exo_icon_shuffle_on.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_exo_icon_vr.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-mdpi-v4/exo_icon_vr.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout-v21_notification_action.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable_notification_icon_background.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-ldpi-v4_exo_icon_rewind.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-ldpi-v4/exo_icon_rewind.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_notification_template_part_time.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_exo_icon_repeat_off.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-hdpi-v4/exo_icon_repeat_off.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_exo_icon_vr.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-hdpi-v4/exo_icon_vr.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-ldpi-v4_exo_edit_mode_logo.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-ldpi-v4/exo_edit_mode_logo.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-anydpi-v21_exo_icon_rewind.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-anydpi-v21/exo_icon_rewind.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xxhdpi-v4_exo_icon_fastforward.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xxhdpi-v4/exo_icon_fastforward.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xxhdpi-v4_exo_icon_repeat_all.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xxhdpi-v4/exo_icon_repeat_all.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_notification_action_tombstone.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout_notification_media_action.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/333a1c851fce95274a1c02b6cf2bfc8f/media-1.1.0/res/layout/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/layout-v16_notification_template_custom_big.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/layout-v16/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_exo_icon_fullscreen_enter.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xhdpi-v4/exo_icon_fullscreen_enter.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_exo_icon_stop.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xhdpi-v4/exo_icon_stop.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-anydpi-v21_exo_icon_stop.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-anydpi-v21/exo_icon_stop.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xxhdpi-v4_exo_icon_repeat_off.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xxhdpi-v4/exo_icon_repeat_off.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-xxxhdpi-v4_exo_icon_circular_play.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-xxxhdpi-v4/exo_icon_circular_play.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-v21_notification_action_background.xml.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_exo_icon_fastforward.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-hdpi-v4/exo_icon_fastforward.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable_launch_background.xml.flat",
+        "source": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/android/app/src/main/res/drawable/launch_background.xml"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_exo_icon_rewind.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-mdpi-v4/exo_icon_rewind.png"
+    },
+    {
+        "merged": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/res/merged/debug/drawable-ldpi-v4_exo_icon_stop.png.flat",
+        "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/drawable-ldpi-v4/exo_icon_stop.png"
+    }
+]

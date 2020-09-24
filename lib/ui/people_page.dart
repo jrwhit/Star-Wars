@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:star_wars/model/Pessoa.dart';
+import 'package:star_wars/model/pessoa.dart';
 import 'package:star_wars/widget/list_detalhes.dart';
 import 'package:star_wars/widget/my_hero.dart';
 
 class PeoplePage extends StatefulWidget {
   PeoplePage(this.pessoa);
-  final Pessoa pessoa;
+  final People pessoa;
 
   @override
   _PeoplePageState createState() => _PeoplePageState(pessoa);
@@ -15,7 +15,7 @@ class PeoplePage extends StatefulWidget {
 
 class _PeoplePageState extends State<PeoplePage> {
   _PeoplePageState(this.pessoa);
-  final Pessoa pessoa;
+  final People pessoa;
   @override
   void initState() {
     // TODO: implement initState

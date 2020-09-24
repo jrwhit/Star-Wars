@@ -1,4 +1,4 @@
-import 'package:star_wars/model/Pessoa.dart';
+import 'package:star_wars/model/pessoa.dart';
 import 'package:star_wars/model/film.dart';
 import 'package:star_wars/model/planeta.dart';
 

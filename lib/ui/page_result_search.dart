@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:star_wars/model/Pessoa.dart';
+import 'package:star_wars/model/pessoa.dart';
 import 'package:star_wars/model/film.dart';
 import 'package:star_wars/model/nave.dart';
 import 'package:star_wars/model/planeta.dart';
@@ -158,11 +158,11 @@ class _ResultSearchState extends State<ResultSearch>
                                     ),
                                   ),
                                 ));
-                        Pessoa pessoa;
+                        People pessoa;
                         ConexaoApi()
                           ..carregarLink(map['results'][index]['url'])
                               .then((value) {
-                            pessoa = Pessoa().fromMap(value);
+                            pessoa = People().fromMap(value);
                             pessoa.image =
                                 "https://starwars-visualguide.com/assets/img/characters/"
                                 "${map["results"][index]['url'].replaceAll(RegExp(r'[^0-9]'), "")}.jpg";

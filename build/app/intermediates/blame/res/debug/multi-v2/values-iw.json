@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/bitxmini/AndroidStudioProjects/Star-Wars/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-iw/values-iw.xml",
+            "map": [
+                {
+                    "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/values-iw/values-iw.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "42",
+                        "startColumns": "4",
+                        "startOffsets": "2704",
+                        "endColumns": "100",
+                        "endOffsets": "2800"
+                    }
+                },
+                {
+                    "source": "/Users/bitxmini/.gradle/caches/transforms-2/files-2.1/8cd99cd3642dbc1ce35999ffa72967a5/exoplayer-ui-2.11.4/res/values-iw/values-iw.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,131,207,269,339,404,468,544,621,705,786,857,918,1005,1091,1155,1218,1283,1342,1409,1474,1548,1610,1664,1735,1783,1844,1903,1970,2031,2094,2155,2212,2278,2342,2408,2460,2514,2582,2650",
+                        "endColumns": "75,75,61,69,64,63,75,76,83,80,70,60,86,85,63,62,64,58,66,64,73,61,53,70,47,60,58,66,60,62,60,56,65,63,65,51,53,67,67,53",
+                        "endOffsets": "126,202,264,334,399,463,539,616,700,781,852,913,1000,1086,1150,1213,1278,1337,1404,1469,1543,1605,1659,1730,1778,1839,1898,1965,2026,2089,2150,2207,2273,2337,2403,2455,2509,2577,2645,2699"
+                    }
+                }
+            ]
+        }
+    ]
+}

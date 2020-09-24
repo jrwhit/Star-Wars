@@ -2,7 +2,7 @@ import 'package:star_wars/model/planeta.dart';
 import 'package:star_wars/model/veiculo.dart';
 import 'package:star_wars/service/conexao.dart';
 
-import 'Pessoa.dart';
+import 'pessoa.dart';
 import 'especie.dart';
 import 'nave.dart';
 
